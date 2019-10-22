@@ -2,6 +2,9 @@ import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const config: webpack.Configuration = {
   mode: 'development',
@@ -25,9 +28,20 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: [
-          "babel-loader",
-          "ts-loader"
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              getCustomTransformers: () => (
+                {
+                  before: [styledComponentsTransformer],
+                }
+              ),
+            },
+          },
         ],
       }
     ],

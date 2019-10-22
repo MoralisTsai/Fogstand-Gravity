@@ -1,12 +1,15 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { hot } from 'react-hot-loader/root';
 
 const Wrapper = styled.div`
   color: orange;
 `;
 
-export const Hello: React.FC<{}> = () => (
+const App: React.FC<{}> = () => (
   <Wrapper>
-    <h1>Apple pay</h1>
+    <h1>Apple pay dd</h1>
   </Wrapper>
 );
+
+export default hot(App);

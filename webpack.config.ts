@@ -11,8 +11,11 @@ const config: webpack.Configuration = {
   devtool: "inline-source-map",
   devServer: {
     contentBase: './dist',
+    hot: true,
+    // @ts-ignore
+    clientLogLevel: 'silent',
   },
-  entry: './src/root.tsx',
+  entry: ['react-hot-loader/patch', './src/root.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -23,6 +26,9 @@ const config: webpack.Configuration = {
       ".tsx",
       ".js",
     ],
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   module: {
     rules: [
@@ -31,6 +37,9 @@ const config: webpack.Configuration = {
         use: [
           {
             loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            }
           },
           {
             loader: 'ts-loader',
@@ -43,7 +52,7 @@ const config: webpack.Configuration = {
             },
           },
         ],
-      }
+      },
     ],
   },
   plugins: [

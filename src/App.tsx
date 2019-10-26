@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 
 const App: React.FC<{}> = () => (
   <Wrapper>
-    <h1>Apple pa sfsdfsd sdfsdfsd dd</h1>
+    <h1>Moralis in t kfsdkfdskhe house</h1>
   </Wrapper>
 );
 

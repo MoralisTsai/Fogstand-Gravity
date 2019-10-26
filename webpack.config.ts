@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
   mode: 'development',
   devtool: "inline-source-map",
   devServer: {
-    contentBase: './dist',
+    contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
     clientLogLevel: 'none',
   },
@@ -62,7 +62,7 @@ const config: webpack.Configuration = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: path.resolve(__dirname, './public/index.html'),
     }),
     new ForkTsCheckerWebpackPlugin({
       eslint: true,

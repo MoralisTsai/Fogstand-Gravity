@@ -1,15 +1,12 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { hot } from 'react-hot-loader/root';
 
-const Wrapper = styled.div`
-  color: black;
-`;
+import { Home } from './components/Home';
 
 const App: React.FC<{}> = () => (
-  <Wrapper>
-    <h1>Moralis in t kfsdkfdskhe house</h1>
-  </Wrapper>
+  <>
+    <Home />
+  </>
 );
 
 export default hot(App);

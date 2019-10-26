@@ -18,7 +18,7 @@ const config: webpack.Configuration = {
   entry: ['react-hot-loader/patch', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: [
@@ -54,6 +54,14 @@ const config: webpack.Configuration = {
                 }
               ),
             },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
           },
         ],
       },

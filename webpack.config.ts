@@ -30,6 +30,10 @@ const config: webpack.Configuration = {
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
+    modules: [
+      path.join(__dirname, 'src'),
+      "node_modules",
+    ],
   },
   module: {
     rules: [

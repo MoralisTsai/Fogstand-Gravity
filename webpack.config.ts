@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -16,7 +15,7 @@ const config: webpack.Configuration = {
     hot: true,
     clientLogLevel: 'none',
   },
-  entry: ['react-hot-loader/patch', './src/root.tsx'],
+  entry: ['react-hot-loader/patch', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { hot } from 'react-hot-loader/root';
 
 const Wrapper = styled.div`
-  color: orange;
+  color: black;
 `;
 
 const App: React.FC<{}> = () => (
   <Wrapper>
-    <h1>Apple pay dd</h1>
+    <h1>Apple pa sfsdfsd sdfsdfsd dd</h1>
   </Wrapper>
 );
 

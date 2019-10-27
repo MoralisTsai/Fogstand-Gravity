@@ -18,6 +18,7 @@ export const Base = createGlobalStyle`
     line-height: 1.5;
     font-weight: ${FontWeight.REGULAR};
     ${getFontSize('NORMAL')};
+    letter-spacing: 3px;
   }
 
   ul {

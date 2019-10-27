@@ -1,12 +1,27 @@
 import * as React from 'react';
-import { hot } from 'react-hot-loader/root';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
 import { Home } from './components/Home';
+import { About } from './components/About';
 
-const App: React.FC<{}> = () => (
-  <>
-    <Home />
-  </>
+export const App: React.FC<{}> = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route
+        path='/about'
+      >
+        <About />
+      </Route>
+      <Route
+        exact
+        path='/'
+      >
+        <Home />
+      </Route>
+    </Switch>
+  </BrowserRouter>
 );
-
-export default hot(App);

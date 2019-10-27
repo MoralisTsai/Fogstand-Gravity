@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 import { Reset, Base } from 'styles/vendor';
 
-import App from './App';
+import { App } from './App';
 
 const HMRApp = hot(App);
 

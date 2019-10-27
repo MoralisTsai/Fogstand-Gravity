@@ -14,11 +14,13 @@ const config: webpack.Configuration = {
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
     clientLogLevel: 'none',
+    historyApiFallback: true,
   },
   entry: ['react-hot-loader/patch', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: [

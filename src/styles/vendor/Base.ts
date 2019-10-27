@@ -37,5 +37,6 @@ export const Base = createGlobalStyle`
     &:active {
       color: inherit;
     }
+    text-decoration: none;
   }
 `;

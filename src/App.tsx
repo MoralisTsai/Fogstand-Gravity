@@ -7,6 +7,7 @@ import {
 
 import { Home } from './components/Home';
 import { About } from './components/About';
+import { Epilogue } from './components/Epilogue';
 
 export const App: React.FC<{}> = () => (
   <BrowserRouter>
@@ -15,6 +16,11 @@ export const App: React.FC<{}> = () => (
         path='/about'
       >
         <About />
+      </Route>
+      <Route
+        path='/epilogue'
+      >
+        <Epilogue />
       </Route>
       <Route
         exact

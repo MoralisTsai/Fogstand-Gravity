@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { Color, FontWeight } from 'styles';
 import { getFontSize } from 'helpers';
 
+import { ReadMoreButton } from 'components/_Shared/ReadMore';
+
 /** Style */
 
 const Wrapper = styled.div`
@@ -31,14 +33,6 @@ const InnerParagraph = styled.p`
   text-align: justify;
   max-width: 900px;
   margin-bottom: 20px;
-`;
-
-const ReadMoreButton = styled.span`
-  border: 1px solid ${Color.COD_GRAY};
-  padding: 2px 15px;
-  ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.LIGHT};
-  cursor: pointer;
 `;
 
 /** End */

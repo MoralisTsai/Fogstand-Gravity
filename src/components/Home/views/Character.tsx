@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import AbstractDot from 'assets/DotTest.png';
 
@@ -94,9 +95,13 @@ export const Character = () => {
                   <ItemWrapper
                     key={authorIndex.toString()}
                   >
-                    <img
-                      src={current.profile}
-                    />
+                    <Link
+                      to={current.link}
+                    >
+                      <img
+                        src={current.profile}
+                      />
+                    </Link>
                     <h4>
                       {current.name}
                       <br />

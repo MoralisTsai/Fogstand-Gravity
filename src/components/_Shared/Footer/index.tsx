@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { getFontSize } from 'helpers';
 import { Color, FontWeight } from 'styles';
@@ -34,15 +35,15 @@ const HeadlineSubtitle = styled.h4`
 const LinkWrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
-`;
 
-const LinkItem = styled.p`
-  ${getFontSize('SMALL')};
-  font-weight: ${FontWeight.BOLD};
-
-  &:not(:last-of-type) {
+  > a:not(:last-of-type) {
     margin-right: 50px;
   }
+`;
+
+const LinkItem = styled.span`
+  ${getFontSize('SMALL')};
+  font-weight: ${FontWeight.BOLD};
 `;
 
 /** End */
@@ -59,15 +60,27 @@ export const Footer = () => {
         </HeadlineSubtitle>
       </HeadlineWrapper>
       <LinkWrapper>
-        <LinkItem>
-          關於我們
-        </LinkItem>
-        <LinkItem>
-          關於立霧
-        </LinkItem>
-        <LinkItem>
-          聯絡我們
-        </LinkItem>
+        <Link
+          to='/editor'
+        >
+          <LinkItem>
+            關於我們
+          </LinkItem>
+        </Link>
+        <a
+          href='https://www.fogstand.com/'
+          rel="noopener noreferrer"
+          target='_blank'
+        >
+          <LinkItem>
+            關於立霧
+          </LinkItem>
+        </a>
+        <a href='mailto:moralis.tsai@gmail.com'>
+          <LinkItem>
+            聯絡我們
+          </LinkItem>
+        </a>
       </LinkWrapper>
     </Wrapper>
   )

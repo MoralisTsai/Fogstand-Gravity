@@ -16,6 +16,7 @@ const Wrapper = styled.span`
   top: 50px;
   left: 50px;
   color: ${Color.WHITE};
+  z-index: 100;
 `;
 
 /** End */

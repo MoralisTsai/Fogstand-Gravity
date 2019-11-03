@@ -13,6 +13,8 @@ const Wrapper = styled.nav`
   background-color: ${Color.WHITE};
   box-shadow: 2px 1px 8px ${rgba(Color.COD_GRAY, 0.4)};
   padding: 0 20px;
+  position: relative;
+  z-index: 100;
 `;
 
 const ListWrapper = styled.ul`

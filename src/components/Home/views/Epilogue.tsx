@@ -42,7 +42,6 @@ const Title = styled.h3`
 
 const InnerText = styled.p`
   ${getFontSize('SMALL')};
-  font-weight: ${FontWeight.THIN};
   line-height: 2;
   margin-bottom: 20px;
 `;

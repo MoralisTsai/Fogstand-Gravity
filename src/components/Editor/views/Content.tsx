@@ -55,20 +55,19 @@ const EditorItem = styled.div`
   }
   
   h3 {
-    font-weight: ${FontWeight.BLACK};
+    font-weight: ${FontWeight.BOLD};
     ${getFontSize('SMALL')};
     text-align: center;
   }
 
   h4 {
-    font-weight: ${FontWeight.BLACK};
+    font-weight: ${FontWeight.BOLD};
     font-size: 0.8rem;
     margin-bottom: 20px;
     text-align: center;
   }
 
   p {
-    font-weight: ${FontWeight.THIN};
     ${getFontSize('EXTRA_SMALL')};
   }
 `;
@@ -88,7 +87,6 @@ const RoleItem = styled.div`
   display: flex;
   flex-flow: row nowrap;
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.THIN};
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }

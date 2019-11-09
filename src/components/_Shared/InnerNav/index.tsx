@@ -36,7 +36,6 @@ const Item = styled.span`
   ${getFontSize('EXTRA_SMALL')};
   text-decoration: underline;
   color: ${rgba(Color.COD_GRAY, 0.5)};
-  font-weight: ${FontWeight.LIGHT};
 `;
 
 /** End */

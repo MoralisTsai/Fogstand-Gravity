@@ -97,7 +97,6 @@ const TitleHighlight = styled.span`
 
 const InnerParagraph = styled.p`
   ${getFontSize('SMALL')};
-  font-weight: ${FontWeight.THIN};
   line-height: 2;
   text-align: justify;
 `;

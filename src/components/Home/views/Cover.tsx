@@ -28,7 +28,7 @@ const InnerContent = styled.div`
 const Title = styled.h2`
   font-size: 4rem;
   color: ${Color.COD_GRAY};
-  font-weight: ${FontWeight.BLACK};
+  font-weight: ${FontWeight.BOLD};
   line-height: 1.1;
   letter-spacing: 10px;
   margin-bottom: 20px;
@@ -36,7 +36,6 @@ const Title = styled.h2`
 
 const Subtitle = styled.h3`
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.THIN};
   letter-spacing: 5px;
   margin-bottom: 10px;
 `;

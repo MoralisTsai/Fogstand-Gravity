@@ -19,8 +19,5 @@ export enum FontSize {
 
 export enum FontWeight {
   THIN = 100,
-  LIGHT = 300,
-  REGULAR = 400,
   BOLD = 700,
-  BLACK = 900,
 }

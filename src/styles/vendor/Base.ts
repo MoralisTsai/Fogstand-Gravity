@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 import { getFontSize } from 'helpers';
-import { FontWeight } from 'styles';
 
 export const Base = createGlobalStyle`
   * {
@@ -16,7 +15,6 @@ export const Base = createGlobalStyle`
   html body {
     font-family: 'Noto Sans TC', sans-serif;
     line-height: 1.5;
-    font-weight: ${FontWeight.REGULAR};
     ${getFontSize('NORMAL')};
     letter-spacing: 3px;
   }

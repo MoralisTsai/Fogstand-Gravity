@@ -28,7 +28,6 @@ const Title = styled.h3`
 
 const InnerParagraph = styled.p`
   ${getFontSize('SMALL')};
-  font-weight: ${FontWeight.THIN};
   line-height: 2;
   text-align: justify;
   max-width: 900px;

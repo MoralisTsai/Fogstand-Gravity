@@ -79,13 +79,11 @@ const CoverHeading = styled.h2`
 
 const CoverSubHeading = styled.h3`
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.REGULAR};
   margin-bottom: 25px;
 `;
 
 const CoverInner = styled.p`
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.THIN};
   position: relative;
   white-space: normal;
 

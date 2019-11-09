@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 
 import { getFontSize } from 'helpers';
-import { FontWeight } from 'styles';
 
 /** Style */
 
@@ -54,7 +53,6 @@ const Avatar = styled.div`
 
 const ChatWrapper = styled.div`
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.THIN};
   background-color: lightblue;
   padding: 10px 15px;
   border-radius: 10px;

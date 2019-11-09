@@ -91,7 +91,6 @@ const ItemWrapper = styled.div`
 
   p {
     ${getFontSize('SMALL')};
-    font-weight: ${FontWeight.THIN};
     line-height: 2;
   }
 `;

@@ -8,7 +8,6 @@ export const ReadMoreButton = styled.span`
   border: 1px solid ${Color.COD_GRAY};
   padding: 2px 15px;
   ${getFontSize('EXTRA_SMALL')};
-  font-weight: ${FontWeight.LIGHT};
   cursor: pointer;
 	transition: all 0.8s;
 	position: relative;

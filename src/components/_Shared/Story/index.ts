@@ -49,7 +49,6 @@ export const PrefaceWrapper = styled.p`
 
 export const ContentInnerText = styled.p`
   text-indent: 30px;
-  font-weight: ${FontWeight.THIN};
   ${getFontSize('EXTRA_SMALL')};
   margin-bottom: 20px;
 `;

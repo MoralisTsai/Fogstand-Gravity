@@ -33,7 +33,6 @@ const Wrapper = styled.div`
       height: 10px;
       top: 0;
       left: 0;
-      font-weight: ${FontWeight.LIGHT};
     }
   }
 `;

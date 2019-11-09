@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { rgba } from 'polished';
 
 import { getFontSize } from 'helpers';
@@ -11,16 +11,27 @@ import { ArticleCoverProps } from './ts/ArticleCover';
 
 /** Style */
 
-interface CoverProps {
-  backgroundImage?: any;
-}
+const ZoomIn = keyframes`
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+`;
+
+const SlideIn = keyframes`
+  from {
+    opacity: 0;
+    bottom: -40;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+`;
 
 const Cover = styled.div`
-  background: ${(props: CoverProps) => `url(${props.backgroundImage})`};
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   position: relative;
   display: flex;
@@ -28,6 +39,7 @@ const Cover = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding-top: 70px;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -56,12 +68,13 @@ const CoverContent = styled.div`
   max-width: 500px;
   max-width: ${(props: CoverContentProps) => (props.customWidth ? props.customWidth : '560px')};
   width: 100%;
+  animation: ${SlideIn} 1s ease-in-out;
+  position: relative;
 `;
 
 const CoverHeading = styled.h2`
   ${getFontSize('EXTRA_LARGE')};
   font-weight: ${FontWeight.BOLD};
-  margin-bottom: 10px;
 `;
 
 const CoverSubHeading = styled.h3`
@@ -80,12 +93,30 @@ const CoverInner = styled.p`
     content: "";
     background-color: ${Color.WHITE};
     position: absolute;
-    top: -10px;
+    top: -15px;
     left: 46%;
     height: 3px;
     width: 40px;
 
   }
+`;
+
+interface BackgroundProps {
+  backgroundImage: string;
+}
+
+const Background = styled.div`
+  background: ${(props: BackgroundProps) => `url(${props.backgroundImage})`};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: ${ZoomIn} 15s linear infinite alternate;
 `;
 
 /** End */
@@ -100,9 +131,10 @@ export const ArticleCover: React.FC<ArticleCoverProps> = (props) => {
   } = props;
   return (
     <>
-      <Cover
-        backgroundImage={coverImg}
-      >
+      <Cover>
+        <Background
+          backgroundImage={coverImg}
+        />
         <CoverLogo />
         <CoverContent
           customWidth={customWidth}

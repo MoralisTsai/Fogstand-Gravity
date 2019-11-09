@@ -4,6 +4,6 @@ interface Data {
 }
 
 export interface InnerNavProps {
-  left: Data;
+  left?: Data;
   right?: Data;
 }

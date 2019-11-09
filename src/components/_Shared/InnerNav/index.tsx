@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
 import { Link } from 'react-router-dom';
 
@@ -10,11 +10,26 @@ import { InnerNavProps } from './ts/InnerNav';
 
 /** Style */
 
+interface WrapperProps {
+  direction?: 'left' | 'right' | 'both';
+}
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 25px;
+
+  ${(props: WrapperProps) => props.direction === 'left' && css`
+    justify-content: flex-start;
+  `}
+
+  ${(props: WrapperProps) => props.direction === 'right' && css`
+    justify-content: flex-end;
+  `}
+
+  ${(props: WrapperProps) => props.direction === 'both' && css`
+    justify-content: space-between;
+  `}
 `;
 
 const Item = styled.span`
@@ -36,15 +51,35 @@ export const InnerNav: React.FC<InnerNavProps> = (props) => {
     return () => window.scrollTo(0, 0);
   }, []);
 
+  const checkDirection = () => {
+    if (left && right) {
+      return 'both';
+    }
+
+    if (left) {
+      return 'left';
+    }
+
+    if (right) {
+      return 'right'
+    }
+  }
+
   return (
-    <Wrapper>
-      <Link
-        to={left.path}
-      >
-        <Item>
-          {left.text}
-        </Item>
-      </Link>
+    <Wrapper
+      direction={checkDirection()}
+    >
+      {
+        left && (
+          <Link
+            to={left.path}
+          >
+            <Item>
+              {left.text}
+            </Item>
+          </Link>
+        )
+      }
       {
         right && (
           <Link

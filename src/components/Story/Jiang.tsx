@@ -1,38 +1,50 @@
 import React from 'react';
 
-import { ArticleCover } from 'components/_Shared/ArticleCover';
 import { jiang } from 'static';
+import { Url } from 'ts/Url';
+import { compose } from 'helpers';
 
-import {
-  ContentWrapper,
-  ContentInnerText,
-  PrefaceWrapper,
-} from 'components/_Shared/Story';
+import { withStory } from './hoc/withStory';
 
-export const Jiang: React.FC<{}> = () => {
+import { ContentInnerText } from 'components/_Shared/Story';
+import { ArticleEnd } from 'components/_Shared/ArticleEnd';
+import { InnerNav } from 'components/_Shared/InnerNav';
+
+const Jiang: React.FC<{}> = () => {
   return (
     <>
-      <ArticleCover
-        name={jiang.name}
-        header={jiang.header}
-        description={jiang.description}
-        coverImg={jiang.cover}
-        customWidth="450px"
+      {
+        jiang.content.map((current, index) => (
+          <ContentInnerText
+            key={index.toString()}
+          >
+            {current}
+          </ContentInnerText>
+        ))
+      }
+      <ArticleEnd />
+      <InnerNav
+        left={{
+          text: 'Darren Tesar',
+          path: Url.DARREN,
+        }}
+        right={{
+          text: '鄧曉蔚',
+          path: Url.WEI,
+        }}
       />
-      <ContentWrapper>
-        <PrefaceWrapper>
-          {jiang.preface}
-        </PrefaceWrapper>
-        {
-          jiang.content.map((current, index) => (
-            <ContentInnerText
-              key={index.toString()}
-            >
-              {current}
-            </ContentInnerText>
-          ))
-        }
-      </ContentWrapper>
     </>
   )
 }
+
+export default compose(
+  <P extends {}>(
+    BaseComponent: React.ComponentType<P>,
+  ): React.FC<P> => (props) => (
+    <BaseComponent
+      {...props}
+      character={jiang}
+    />
+  ),
+  withStory,
+)(Jiang);

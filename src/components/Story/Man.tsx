@@ -1,37 +1,50 @@
 import React from 'react';
 
-import { ArticleCover } from 'components/_Shared/ArticleCover';
 import { man } from 'static';
+import { Url } from 'ts/Url';
+import { compose } from 'helpers';
 
-import {
-  ContentWrapper,
-  ContentInnerText,
-  PrefaceWrapper,
-} from 'components/_Shared/Story';
+import { withStory } from './hoc/withStory';
 
-export const Man: React.FC<{}> = () => {
+import { ContentInnerText } from 'components/_Shared/Story';
+import { ArticleEnd } from 'components/_Shared/ArticleEnd';
+import { InnerNav } from 'components/_Shared/InnerNav';
+
+const Man: React.FC<{}> = () => {
   return (
     <>
-      <ArticleCover
-        name={man.name}
-        header={man.header}
-        description={man.description}
-        coverImg={man.cover}
+      {
+        man.content.map((current, index) => (
+          <ContentInnerText
+            key={index.toString()}
+          >
+            {current}
+          </ContentInnerText>
+        ))
+      }
+      <ArticleEnd />
+      <InnerNav
+        left={{
+          text: '鄧曉蔚',
+          path: Url.WEI,
+        }}
+        right={{
+          text: '周王',
+          path: Url.WANG,
+        }}
       />
-      <ContentWrapper>
-        <PrefaceWrapper>
-          {man.preface}
-        </PrefaceWrapper>
-        {
-          man.content.map((current, index) => (
-            <ContentInnerText
-              key={index.toString()}
-            >
-              {current}
-            </ContentInnerText>
-          ))
-        }
-      </ContentWrapper>
     </>
   )
-}
+};
+
+export default compose(
+  <P extends {}>(
+    BaseComponent: React.ComponentType<P>,
+  ): React.FC<P> => (props) => (
+    <BaseComponent
+      {...props}
+      character={man}
+    />
+  ),
+  withStory,
+)(Man);

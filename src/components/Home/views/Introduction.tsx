@@ -1,10 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 
-import { FontWeight } from 'styles';
+import { FontWeight, Color } from 'styles';
 import { getFontSize } from 'helpers';
 
 /** Style */
+
+const ImagePosed = posed.div({
+  visible: {
+    transition: {
+      duration: 1500,
+    },
+    opacity: 1,
+    left: 0,
+  },
+  hidden: {
+    opacity: 0,
+    left: -20,
+  },
+});
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,17 +30,33 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(ImagePosed)`
   background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259915/sub-pic-3_cymzyk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   flex: 1 1 512px;
   margin-right: 20px;
+  position: relative;
 `;
 
-const ContentWrapper = styled.div`
+const PosedContent = posed.div({
+  visible: {
+    transition: {
+      duration: 1500,
+    },
+    opacity: 1,
+    bottom: 0,
+  },
+  hidden: {
+    opacity: 0,
+    bottom: -50,
+  },
+});
+
+const ContentWrapper = styled(PosedContent)`
   flex: 1 1 512px;
   padding: 30px 50px;
+  position: relative;
 `;
 
 const Title = styled.h3`
@@ -33,6 +64,35 @@ const Title = styled.h3`
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 20px;
+`;
+
+const TitleHighlight = styled.span`
+  background-color: ${Color.COD_GRAY};
+  transform: rotate(-3deg);
+  margin-bottom: 20px;
+  padding: 5px 25px;
+  display: inline-block;
+  position: relative;
+  color: ${Color.WHITE};
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(121, 121, 121, 0.4);
+    width: 25px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: -10px;
+  }
+
+  &::before {
+    left: -10px;
+  }
 `;
 
 const InnerParagraph = styled.p`
@@ -45,12 +105,35 @@ const InnerParagraph = styled.p`
 /** End */
 
 export const Introduction = () => {
+  const [isDisplay, setDisplay] = React.useState(false);
+  const imgEl = React.useRef(null);
+  React.useEffect(() => {
+    const scrollAction = () => {
+      const position = imgEl.current.getBoundingClientRect().top;
+
+      setDisplay(position < 400);
+    };
+
+    window.addEventListener('scroll', scrollAction);
+
+    return (() => {
+      window.removeEventListener('scroll', scrollAction);
+    })
+  }, []);
+
   return (
     <Wrapper>
-      <ImageWrapper />
-      <ContentWrapper>
+      <ImageWrapper
+        ref={imgEl}
+        pose={isDisplay ? 'visible' : 'hidden'}
+      />
+      <ContentWrapper
+        pose={isDisplay ? 'visible' : 'hidden'}
+      >
         <Title>
-          打破現狀
+          <TitleHighlight>
+            打破現狀
+          </TitleHighlight>
           <br />
           立霧讓原住民文化
           <br />

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import posed from 'react-pose';
 
 import { getFontSize } from 'helpers';
 import { FontWeight } from 'styles';
@@ -21,13 +22,25 @@ const Title = styled.h3`
   margin-bottom: 50px;
 `;
 
-const ContentWrapper = styled.div`
+const PosedContent = posed.div({
+  visible: {
+    opacity: 1,
+    bottom: 0,
+  },
+  hidden: {
+    opacity: 0,
+    bottom: -50,
+  },
+})
+
+const ContentWrapper = styled(PosedContent)`
   background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259913/DotTest_sf6eyl.png');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100%;
   max-width: 1280px;
   margin: auto;
+  position: relative;
 `;
 
 const RowWrapper = styled.div`
@@ -87,12 +100,30 @@ const ItemWrapper = styled.div`
 /** End */
 
 export const Character = () => {
+  const [isDisplay, setDisplay] = React.useState(false);
+  const el = React.useRef(null);
+  React.useEffect(() => {
+    const scrollAction = () => {
+      const position = el.current.getBoundingClientRect().top;
+
+      setDisplay(position < 400);
+    };
+
+    window.addEventListener('scroll', scrollAction);
+
+    return (() => {
+      window.removeEventListener('scroll', scrollAction);
+    })
+  }, []);
   return (
     <Wrapper>
       <Title>
         人物介紹
       </Title>
-      <ContentWrapper>
+      <ContentWrapper
+        ref={el}
+        pose={isDisplay ? 'visible' : 'hidden'}
+      >
         {
           getCharacters().map((author, index) => (
             <RowWrapper

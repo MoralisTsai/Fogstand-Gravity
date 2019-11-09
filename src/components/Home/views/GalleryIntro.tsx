@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { Color, FontWeight } from 'styles';
+import { FontWeight } from 'styles';
 import { getFontSize } from 'helpers';
 
 import { ReadMoreButton } from 'components/_Shared/ReadMore';
@@ -46,13 +46,13 @@ export const GalleryIntro = () => {
       <InnerParagraph>
         通往花蓮機場的主要道路上，砂石車、汽車呼嘯而過。看著地圖上的指示，我們沿著花蓮某大賣場旁的小巷，走進了名為嘉里村的小村落。嘉里村在日據時代被稱作「加禮宛」，是著名的「加禮宛事件」發生地點——最初宜蘭的噶瑪蘭族遷居至加禮宛，後來被漢人佔據土地，他們與撒奇萊雅族聯合抗清但卻失敗，導致土地被佔，再加上阿美族勢力日益壯大，因此今日的嘉里村以阿美族人口居多。這邊的道路窄窄的、樓房都不高，沒有過多的汽機車，有的是純樸的氛圍，許多村民甚至擺出椅子與小板凳，在自己住家樓下聊起天來。我們看著地圖，卻怎麼也找不到立霧工作坊，詢問村民後才發現，原來它隱身在巷弄裡更小的巷子中。
       </InnerParagraph>
-      <Link
-        to='/about'
-      >
-        <ReadMoreButton>
+      <ReadMoreButton>
+        <Link
+          to='/about'
+        >
           閱讀更多
-        </ReadMoreButton>
-      </Link>
+          </Link>
+      </ReadMoreButton>
     </Wrapper>
   );
 };

@@ -25,8 +25,9 @@ export const Home: React.FC<{}> = () => {
   React.useEffect(() => {
     return () => window.scrollTo(0, 0);
   }, []);
+
   return (
-    <>
+    <div>
       <Menu />
       <BlockWrapper>
         <Cover />
@@ -47,6 +48,6 @@ export const Home: React.FC<{}> = () => {
         <Epilogue />
       </BlockWrapper>
       <Footer />
-    </>
+    </div>
   )
 };

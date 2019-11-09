@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import Cover from 'assets/post-1.jpg';
-
 import { getFontSize } from 'helpers';
 import { FontWeight } from 'styles';
 
@@ -20,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const CoverWrapper = styled.div`
-  background-image: url(${Cover});
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259916/post-1_nssxrn.jpg');
   background-repeat: no-repeat;
   background-position: 34%;
   background-size: cover;

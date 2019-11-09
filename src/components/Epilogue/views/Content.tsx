@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { getFontSize } from 'helpers';
 import { FontWeight } from 'styles';
 
-import Fig1 from 'assets/post-main-3.jpg';
-
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
 
@@ -53,7 +51,7 @@ export const Content = () => {
         立霧工作坊得以繼續下去的動力，來自於許多得力助手以及支持的群眾，而江姊在其中扮演一部分重要的角色。她雖然對當代藝術不慎瞭解，但卻不遺餘力的幫助陳雯俐處理立霧工作坊的行政事務，或許江姊認為自己只是幫忙處理雜事，但她的付出就如同小螺絲釘一般，使工作坊能站得穩穩地，也讓陳雯俐和DarrenTesar可以專心於活動及策劃展覽上，不需要分心去處理比較細微的行政工作。不僅如此，江姊還擔任著村民間很重要的橋樑，牽起村落婦女、青少年和立霧工作坊之間的緣分，讓更多人願意來這裡看看，也使工作坊能發揮更大的功能。
       </InnerText>
       <Figure
-        src={Fig1}
+        src="https://res.cloudinary.com/defykcau3/image/upload/v1573259914/post-main-3_fxf9a1.jpg"
       />
       <InnerText>
         與我們年紀相仿的鄧曉蔚，當初被一張招募志工的海報所吸引，為了累積自己在藝術方面的經驗，選擇加入立霧工作坊、成為陳雯俐的另一隻手。在擔任行政助理的這段期間，要幫忙宣傳、協助展覽執行流程等等，付出的時間與努力雖然無法被人們看到，但這些都將在無形之中成為鄧曉蔚成長的養分、使她成長茁壯，更幫助她在往後能蛻變成成熟且有能力面對一切困難的藝術工作者。

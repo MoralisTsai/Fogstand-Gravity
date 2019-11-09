@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ChenYu from 'assets/chen-yu-avatar.jpg';
-import YiLing from 'assets/wendy-avatar.jpg';
-import Moralis from 'assets/moralis-avatar.jpg';
-
 import { getFontSize } from 'helpers';
 import { Color, FontWeight } from 'styles';
 
@@ -125,7 +121,7 @@ export const Content = () => {
             <EditorItem>
               <img
                 alt="avatar"
-                src={ChenYu}
+                src="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/chen-yu-avatar_ywaewv.jpg"
               />
               <h3>
                 陳妤
@@ -140,7 +136,7 @@ export const Content = () => {
             <EditorItem>
               <img
                 alt="avatar"
-                src={YiLing}
+                src="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/wendy-avatar_l2tpt7.jpg"
               />
               <h3>
                 高宜鈴
@@ -155,7 +151,7 @@ export const Content = () => {
             <EditorItem>
               <img
                 alt="avatar"
-                src={Moralis}
+                src="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/moralis-avatar_bgen9n.jpg"
               />
               <h3>
                 蔡秋圓

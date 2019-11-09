@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import CoverImg from 'assets/post-main-1.jpg';
-
 import { getFontSize } from 'helpers';
 import { Color, FontWeight } from 'styles';
 import { CoverLogo } from 'components/_Shared/CoverLogo';
@@ -11,7 +9,7 @@ import { CoverLogo } from 'components/_Shared/CoverLogo';
 /** Style */
 
 const CoverWrapper = styled.div`
-  background-image: url(${CoverImg});
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259917/post-main-1_qmoph9.jpg');
   background-size: cover;
   height: 400px;
   position: relative;

@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import { getFontSize } from 'helpers';
 import { FontWeight } from 'styles';
 
-import Fig1 from 'assets/workshop-1.jpg';
-import Fig2 from 'assets/workshop-3.jpg'
-
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
 
@@ -42,7 +39,7 @@ export const Content = () => {
         通往花蓮機場的主要道路上，砂石車、汽車呼嘯而過。看著地圖上的指示，我們沿著花蓮某大賣場旁的小巷，走進了名為嘉里村的小村落。嘉里村在日據時代被稱作「加禮宛」，是著名的「加禮宛事件」發生地點——最初宜蘭的噶瑪蘭族遷居至加禮宛，後來被漢人佔據土地，他們與撒奇萊雅族聯合抗清但卻失敗，導致土地被佔，再加上阿美族勢力日益壯大，因此今日的嘉里村以阿美族人口居多。這邊的道路窄窄的、樓房都不高，沒有過多的汽機車，有的是純樸的氛圍，許多村民甚至擺出椅子與小板凳，在自己住家樓下聊起天來。我們看著地圖，卻怎麼也找不到立霧工作坊，詢問村民後才發現，原來它隱身在巷弄裡更小的巷子中。
       </InnerText>
       <Figure
-        src={Fig1}
+        src="https://res.cloudinary.com/defykcau3/image/upload/v1573259916/workshop-1_yeglj1.jpg"
       />
       <InnerText>
         彎進這隱密的巷弄內，映入眼簾的是一片小草地，以及一間由鐵皮屋打造的平房，從外觀來說並不像是大家認知中「工作坊」的樣子，屋子旁雜草的高度如同叢林一般，看起來荒涼，卻也增添不少神秘感。我們小心翼翼地打開木門，「歡迎！」一位精神奕奕、充滿熱情的大姊，親切地向我們打招呼，也與我們介紹、導覽工作坊：「這裡是老一輩留下來的房子，內側的空間是後來整修時加蓋的。」這位大姊是立霧工作坊的行政助理——江姊，她向我們娓娓道出這個空間的來由。
@@ -54,7 +51,7 @@ export const Content = () => {
         立霧工作坊是一個非營利性質的藝術空間及創意教育中心，其營運理念是以「教育」、「分享」、「支持小量化及獨立性」、「專案導向」以及「支持社區在地發展與少數原民族群及文化」為原則。他們曾邀請同樣身為原住民的紀錄片工作者前來分享，也舉辦過像是《街頭語言游擊隊——漫畫創作工作坊》等，具有教育意義或啟發性的活動，多元化的面貌之下，皆是以上述為前提來進行規劃的。
       </InnerText>
       <Figure
-        src={Fig2}
+        src="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/workshop-3_iekumg.jpg"
       />
       <InnerText>
         追溯起臺灣藝術文化的起源，是從日治時期開始的，當時以總督府的力量在推廣美術，臺灣人民也致力於繪畫活動。一九三五年，臺陽美術協會在教育會館（美國在臺協會現址）舉辦第一次的美術展覽，轟動臺灣各界。隨著時代演進，各地藝文活動多元發展：視覺藝術、工藝、設計、音樂等，但各地推廣藝文活動的情形不盡相同，在發展上也產生了地域性的差別。

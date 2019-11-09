@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Cover from 'assets/sub-1.jpg';
-
 import { getFontSize } from 'helpers';
 import { FontWeight, Color } from 'styles';
 
@@ -13,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Parallax = styled.div`
-  background-image: url(${Cover});
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259914/sub-1_pf2pgl.jpg');
   min-height: 570px;
   background-attachment: fixed;
   background-position: top left;

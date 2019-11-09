@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import AbstractDot from 'assets/DotTest.png';
-
 import { getFontSize } from 'helpers';
 import { FontWeight } from 'styles';
 import { getCharacters } from '../data/getCharacters';
@@ -24,7 +22,7 @@ const Title = styled.h3`
 `;
 
 const ContentWrapper = styled.div`
-  background-image: url(${AbstractDot});
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259913/DotTest_sf6eyl.png');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100%;

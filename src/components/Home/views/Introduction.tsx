@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Cover from 'assets/sub-pic-3.jpg';
 import { FontWeight } from 'styles';
 import { getFontSize } from 'helpers';
 
@@ -17,7 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  background-image: url(${Cover});
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259915/sub-pic-3_cymzyk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   flex: 1 1 512px;

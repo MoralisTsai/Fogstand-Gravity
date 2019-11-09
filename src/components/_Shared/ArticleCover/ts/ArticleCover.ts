@@ -2,7 +2,7 @@ export type PassingProps = {
   name: string;
   header: string;
   description: string;
-  coverImg: any;
+  coverImg: string;
   customWidth?: string;
 }
 

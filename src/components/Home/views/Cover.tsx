@@ -5,6 +5,8 @@ import { Color, FontWeight } from 'styles';
 import { getFontSize } from 'helpers';
 import Avatar from 'assets/front-cover.jpg';
 
+import { FadeInUp } from 'styles/Animation';
+
 /** Style */
 
 const OuterWrapper = styled.div`
@@ -21,6 +23,7 @@ const InnerContent = styled.div`
   bottom: 30px;
   left: 50px;
   text-align: center;
+  animation: ${FadeInUp} 1500ms ease-in-out;
 `;
 
 const Title = styled.h2`

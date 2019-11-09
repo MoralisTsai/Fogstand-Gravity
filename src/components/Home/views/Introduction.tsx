@@ -60,10 +60,11 @@ const ContentWrapper = styled(PosedContent)`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('MEGA_LARGE')};
+  ${getFontSize('S3')};
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 20px;
+  line-height: 1.5;
 `;
 
 const TitleHighlight = styled.span`
@@ -96,8 +97,6 @@ const TitleHighlight = styled.span`
 `;
 
 const InnerParagraph = styled.p`
-  ${getFontSize('SMALL')};
-  line-height: 2;
   text-align: justify;
 `;
 

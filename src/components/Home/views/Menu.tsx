@@ -5,8 +5,6 @@ import { rgba } from 'polished';
 import { Color, FontWeight } from 'styles';
 import { getFontSize } from 'helpers'
 
-
-
 /** Style */
 
 const Wrapper = styled.nav`
@@ -24,7 +22,8 @@ const ListWrapper = styled.ul`
 `;
 
 const FeatureBlock = styled.li`
-  ${getFontSize('MEGA_LARGE')};
+  ${getFontSize('S3')};
+  line-height: 1.5;
   background-color: ${Color.COD_GRAY};
   padding: 10px 20px;
   color: ${Color.WHITE};
@@ -37,7 +36,6 @@ interface MenuItemProps {
 }
 
 const MenuItem = styled.li`
-  ${getFontSize('EXTRA_SMALL')};
   font-weight: ${FontWeight.BOLD};
   cursor: pointer;
   padding: 5px 25px;

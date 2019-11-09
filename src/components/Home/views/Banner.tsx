@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 
-import { getFontSize } from 'helpers';
-
 /** Style */
 
 const Wrapper = styled.div`
@@ -52,11 +50,10 @@ const Avatar = styled.div`
 `;
 
 const ChatWrapper = styled.div`
-  ${getFontSize('EXTRA_SMALL')};
   background-color: lightblue;
   padding: 10px 15px;
   border-radius: 10px;
-  max-width: 300px;
+  max-width: 450px;
 `;
 
 /** End */
@@ -80,15 +77,6 @@ export const Banner = () => {
   return (
     <Wrapper>
       <Parallax />
-      <ContentWrapper
-        ref={el}
-        pose={isDisplay ? 'visible' : 'hidden'}
-      >
-        <Avatar />
-        <ChatWrapper>
-          我希望能藉由立霧工作坊這個平臺，將我腦袋中的東西掏出來分享給家鄉的居民，期望他們在未來能為自己創造一片天
-        </ChatWrapper>
-      </ContentWrapper>
       <ContentWrapper
         ref={el}
         pose={isDisplay ? 'visible' : 'hidden'}

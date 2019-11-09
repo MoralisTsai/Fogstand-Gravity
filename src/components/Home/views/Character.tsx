@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('EXTRA_LARGE')};
+  ${getFontSize('S3')};
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 50px;
@@ -82,16 +82,10 @@ const ItemWrapper = styled.div`
   }
 
   h4 {
-    ${getFontSize('EXTRA_SMALL')};
     font-weight: ${FontWeight.BOLD};
     margin-bottom: 20px;
     text-align: center;
-    line-height: 1.8;
-  }
-
-  p {
-    ${getFontSize('SMALL')};
-    line-height: 2;
+    line-height: 1.5;
   }
 `;
 

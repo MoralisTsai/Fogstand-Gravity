@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
-import { getFontSize } from 'helpers';
-import { Color, FontWeight } from 'styles';
+import { Color } from 'styles';
 
 export const ContentWrapper = styled.div`
   max-width: 700px;
   width: 100%;
   margin: auto;
-  color: ${Color.COD_GRAY};
-  line-height: 2;
   text-align: justify;
 `;
 
@@ -21,10 +18,7 @@ export const PrefaceWrapper = styled.p`
   position: relative;
   margin: 50px auto 40px;
   font-weight: 700;
-  letter-spacing: 3px;
   position: relative;
-  ${getFontSize('EXTRA_SMALL')};
-  line-height: 2;
 
   &::before {
     content: "";
@@ -49,6 +43,5 @@ export const PrefaceWrapper = styled.p`
 
 export const ContentInnerText = styled.p`
   text-indent: 30px;
-  ${getFontSize('EXTRA_SMALL')};
   margin-bottom: 20px;
 `;

@@ -34,15 +34,13 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('EXTRA_LARGE')};
+  ${getFontSize('S3')};
   margin-bottom: 30px;
   font-weight: ${FontWeight.BOLD};
   text-align: center;
 `;
 
 const InnerText = styled.p`
-  ${getFontSize('SMALL')};
-  line-height: 2;
   margin-bottom: 20px;
 `;
 

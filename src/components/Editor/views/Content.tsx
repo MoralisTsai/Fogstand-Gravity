@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   width: 100%;
   margin: auto;
   margin-top: 80px;
-  color: ${Color.COD_GRAY};
 `;
 
 const AboutUsWrapper = styled.div`
@@ -26,8 +25,7 @@ const AboutUsWrapper = styled.div`
 const TitleBlock = styled.div`
   background-color: ${Color.QUILL_GRAY};
   padding: 10px 24px;
-  color: ${Color.COD_GRAY};
-  ${getFontSize('EXTRA_LARGE')};
+  ${getFontSize('S3')};
   display: inline-block;
   font-weight: ${FontWeight.BOLD};
   margin-right: 50px;
@@ -43,7 +41,6 @@ const EditorList = styled.div`
 const EditorItem = styled.div`
   max-width: 250px;
   width: 100%;
-  line-height: 2;
 
   &:not(:last-of-type) {
     margin-right: 40px;
@@ -56,19 +53,18 @@ const EditorItem = styled.div`
   
   h3 {
     font-weight: ${FontWeight.BOLD};
-    ${getFontSize('SMALL')};
+    font-size: 1.5rem;
     text-align: center;
   }
 
   h4 {
     font-weight: ${FontWeight.BOLD};
-    font-size: 0.8rem;
+    ${getFontSize('S7')};
     margin-bottom: 20px;
     text-align: center;
   }
 
   p {
-    ${getFontSize('EXTRA_SMALL')};
   }
 `;
 
@@ -86,7 +82,6 @@ const RoleList = styled.div`
 const RoleItem = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  ${getFontSize('EXTRA_SMALL')};
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }

@@ -17,7 +17,7 @@ const CoverWrapper = styled.div`
 `;
 
 const CoverTitle = styled.h2`
-  ${getFontSize('LARGE')};
+  ${getFontSize('S3')};
   padding: 5px 30px;
   background-color: ${rgba(Color.COD_GRAY, 0.3)};
   top: 50%;

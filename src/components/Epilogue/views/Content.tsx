@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { getFontSize } from 'helpers';
-
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
 
@@ -15,8 +13,6 @@ const Wrapper = styled.div`
 `;
 
 const InnerText = styled.p`
-  ${getFontSize('SMALL')};
-  line-height: 2;
   text-indent: 30px;
   text-align: justify;
   margin-bottom: 20px;

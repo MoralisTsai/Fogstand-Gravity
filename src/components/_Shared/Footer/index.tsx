@@ -22,10 +22,11 @@ const HeadlineWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: ${FontWeight.BOLD};
+  line-height: 1.5;
 `;
 
-const HeadlineTtitle = styled.h3`
-  ${getFontSize('MEGA_LARGE')};
+const HeadlineTitle = styled.h3`
+  ${getFontSize('S3')};
 `;
 
 const HeadlineSubtitle = styled.h4`
@@ -42,7 +43,6 @@ const LinkWrapper = styled.div`
 `;
 
 const LinkItem = styled.span`
-  ${getFontSize('SMALL')};
   font-weight: ${FontWeight.BOLD};
 `;
 
@@ -52,9 +52,9 @@ export const Footer = () => {
   return (
     <Wrapper>
       <HeadlineWrapper>
-        <HeadlineTtitle>
+        <HeadlineTitle>
           立新引力
-        </HeadlineTtitle>
+        </HeadlineTitle>
         <HeadlineSubtitle>
           FOGSTAND GRAVITY
         </HeadlineSubtitle>

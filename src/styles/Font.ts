@@ -1,12 +1,3 @@
-export enum FontSize {
-  MEGA_LARGE = '2.5rem',
-  EXTRA_LARGE = '2.125rem',
-  LARGE = '1.625rem',
-  NORMAL = '1.3125rem',
-  SMALL = '1.125rem',
-  EXTRA_SMALL = '1rem',
-}
-
 // BASE -> 1024px -> 768px -> 425px
 
 // 2.5 a.k.a 40px -> NONE
@@ -16,6 +7,11 @@ export enum FontSize {
 // 1.125 a.k.a 18px -> NONE
 // 1 a.k.a 16px -> NONE
 
+export enum FontSize {
+  S3 = '2.5rem',
+  S6 = '1.125rem',
+  S7 = '0.8rem',
+}
 
 export enum FontWeight {
   THIN = 100,

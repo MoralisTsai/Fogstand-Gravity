@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
-import { FontWeight, Color } from 'styles';
+import { Color } from 'styles';
+import { getFontSize } from 'helpers';
 
 import { FigureProps } from './ts/Figure';
 
@@ -10,7 +11,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  line-height: 2;
   margin-bottom: 20px;
 
   img {
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
   figcaption {
     color: ${lighten(0.35, Color.COD_GRAY)};
-    font-size: .8rem;
+    ${getFontSize('S7')};
     position: relative;
     padding-top: 20px;
 
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
       position: absolute;
       content: '';
       width: 100px;
-      background-color: #b2dfdb;
+      background-color: ${Color.AQUA_ISLAND};
       height: 10px;
       top: 0;
       left: 0;

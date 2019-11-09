@@ -20,15 +20,13 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('MEGA_LARGE')};
+  ${getFontSize('S3')};
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 30px;
 `;
 
 const InnerParagraph = styled.p`
-  ${getFontSize('SMALL')};
-  line-height: 2;
   text-align: justify;
   max-width: 900px;
   margin-bottom: 20px;

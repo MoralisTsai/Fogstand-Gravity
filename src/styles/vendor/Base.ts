@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import { getFontSize } from 'helpers';
+import { FontWeight, Color } from 'styles';
 
 export const Base = createGlobalStyle`
   * {
@@ -14,9 +15,11 @@ export const Base = createGlobalStyle`
 
   html body {
     font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.5;
-    ${getFontSize('NORMAL')};
+    line-height: 2;
+    ${getFontSize('S6')};
     letter-spacing: 3px;
+    font-weight: ${FontWeight.THIN};
+    color: ${Color.COD_GRAY};
   }
 
   ul {

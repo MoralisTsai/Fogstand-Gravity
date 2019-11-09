@@ -73,19 +73,18 @@ const CoverContent = styled.div`
 `;
 
 const CoverHeading = styled.h2`
-  ${getFontSize('EXTRA_LARGE')};
+  ${getFontSize('S3')};
   font-weight: ${FontWeight.BOLD};
 `;
 
 const CoverSubHeading = styled.h3`
-  ${getFontSize('EXTRA_SMALL')};
   margin-bottom: 25px;
 `;
 
 const CoverInner = styled.p`
-  ${getFontSize('EXTRA_SMALL')};
   position: relative;
   white-space: normal;
+  line-height: 1.5;
 
   &::before {
     content: "";

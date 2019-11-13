@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { rgba } from 'polished';
 
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 import { Color, FontWeight } from 'styles';
 
 import { CoverLogo } from 'components/_Shared/CoverLogo';
@@ -60,7 +60,7 @@ interface CoverContentProps {
 
 const CoverContent = styled.div`
   background-color: ${rgba(Color.COD_GRAY, 0.3)};
-  padding: 25px 20px;
+  padding: 15px 20px 25px;
   color: ${Color.WHITE};
   text-align: center;
   position: relative;
@@ -70,6 +70,12 @@ const CoverContent = styled.div`
   width: 100%;
   animation: ${SlideIn} 1s ease-in-out;
   position: relative;
+  margin: 0 50px;
+  line-height: 1.5;
+
+  ${responsive.mobile`
+    margin: 0 20px;
+  `}
 `;
 
 const CoverHeading = styled.h2`
@@ -79,12 +85,16 @@ const CoverHeading = styled.h2`
 
 const CoverSubHeading = styled.h3`
   margin-bottom: 25px;
+
+  ${responsive.tablet`
+    margin: 0;
+  `}
+
 `;
 
 const CoverInner = styled.p`
   position: relative;
   white-space: normal;
-  line-height: 1.5;
 
   &::before {
     content: "";
@@ -94,8 +104,11 @@ const CoverInner = styled.p`
     left: 46%;
     height: 3px;
     width: 40px;
-
   }
+
+  ${responsive.tablet`
+    display: none;
+  `}
 `;
 
 interface BackgroundProps {
@@ -114,6 +127,10 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   animation: ${ZoomIn} 15s linear infinite alternate;
+
+  ${responsive.tablet`
+    background-attachment: initial;
+  `}
 `;
 
 /** End */

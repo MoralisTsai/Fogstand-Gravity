@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { wenli } from 'static';
 import { Url } from 'ts/Url';
 import { compose } from 'helpers';
 
+import { wenli } from './static';
 import { withStory } from './hoc/withStory';
 
 import { ContentInnerText } from 'components/_Shared/Story';

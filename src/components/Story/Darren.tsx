@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { darren } from 'static';
 import { Url } from 'ts/Url';
 import { compose } from 'helpers';
 
+import { darren } from './static';
 import { withStory } from './hoc/withStory';
 
 import { ContentInnerText } from 'components/_Shared/Story';
@@ -58,6 +58,7 @@ export default compose(
     <BaseComponent
       {...props}
       character={darren}
+      customWidth="500px"
     />
   ),
   withStory,

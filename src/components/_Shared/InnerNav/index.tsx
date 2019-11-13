@@ -3,8 +3,7 @@ import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
 import { Link } from 'react-router-dom';
 
-import { getFontSize } from 'helpers';
-import { Color, FontWeight } from 'styles';
+import { Color } from 'styles';
 
 import { InnerNavProps } from './ts/InnerNav';
 
@@ -35,6 +34,7 @@ const Wrapper = styled.div`
 const Item = styled.span`
   text-decoration: underline;
   color: ${rgba(Color.COD_GRAY, 0.5)};
+  letter-spacing: 1px;
 `;
 
 /** End */

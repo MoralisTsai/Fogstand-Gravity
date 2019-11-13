@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 import { Color, FontWeight } from 'styles';
 
 import { Footer } from 'components/_Shared/Footer';
+
+import { SlideInDown } from 'styles/Animation';
 
 /** Style */
 
@@ -13,13 +15,25 @@ const Wrapper = styled.div`
   width: 100%;
   margin: auto;
   margin-top: 80px;
+  padding: 0 50px;
+
+  ${responsive.tablet`
+    margin-top: 50px;
+  `}
 `;
 
-const AboutUsWrapper = styled.div`
+const BlockWrapper = styled.div`
   margin-bottom: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  animation: ${SlideInDown} 1000ms ease-in-out;
+
+  ${responsive.tablet`
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `}
 `;
 
 const TitleBlock = styled.div`
@@ -30,49 +44,63 @@ const TitleBlock = styled.div`
   font-weight: ${FontWeight.BOLD};
   margin-right: 50px;
   flex-shrink: 0;
+  line-height: 1.5;
+
+  ${responsive.tablet`
+    margin: 0;
+    margin-bottom: 50px;
+  `}
 `;
 
 const EditorList = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
+
+  ${responsive.tablet`
+    flex-direction: column;
+  `}
 `;
 
 const EditorItem = styled.div`
   max-width: 250px;
   width: 100%;
 
+  ${responsive.tablet`
+    max-width: 400px;
+  `}
+
   &:not(:last-of-type) {
     margin-right: 40px;
+
+    ${responsive.tablet`
+      margin: 0;
+      margin-bottom: 40px;
+    `}
   }
 
   img {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   h3 {
     font-weight: ${FontWeight.BOLD};
     font-size: 1.5rem;
     text-align: center;
+    line-height: 1.5;
   }
 
   h4 {
-    font-weight: ${FontWeight.BOLD};
+    font-weight: ${FontWeight.THIN};
     ${getFontSize('SMALL')};
     margin-bottom: 20px;
     text-align: center;
   }
 
   p {
+    text-align: justify;
   }
-`;
-
-const AcknowledgementWrapper = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
-  margin-bottom: 40px;
 `;
 
 const RoleList = styled.div`
@@ -82,18 +110,36 @@ const RoleList = styled.div`
 const RoleItem = styled.div`
   display: flex;
   flex-flow: row nowrap;
+
+  ${responsive.tablet`
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `}
+
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
 
   h3 {
-    max-width: 300px;
+    max-width: 150px;
     width: 100%;
 
+    ${responsive.tablet`
+      max-width: initial;
+      width: initial;
+    `}
   }
 
   p {
     margin-left: 10px;
+    letter-spacing: 1px;
+
+    ${responsive.tablet`
+      margin: 0;
+      font-weight: ${FontWeight.BOLD};
+      text-align: center;
+    `}
   }
 `;
 
@@ -104,7 +150,7 @@ export const Content = () => {
   return (
     <>
       <Wrapper>
-        <AboutUsWrapper>
+        <BlockWrapper>
           <TitleBlock>
             關於
           <br />
@@ -119,7 +165,7 @@ export const Content = () => {
               <h3>
                 陳妤
             </h3>
-              <h4>
+            <h4>
                 國考生
             </h4>
               <p>
@@ -157,8 +203,8 @@ export const Content = () => {
             </p>
             </EditorItem>
           </EditorList>
-        </AboutUsWrapper>
-        <AcknowledgementWrapper>
+        </BlockWrapper>
+        <BlockWrapper>
           <TitleBlock>
             特別
           <br />
@@ -178,7 +224,7 @@ export const Content = () => {
                 作者
             </h3>
               <p>
-                陳妤 | 高宜鈴 | 蔡秋圓
+                陳妤 / 高宜鈴 / 蔡秋圓
             </p>
             </RoleItem>
             <RoleItem>
@@ -186,7 +232,7 @@ export const Content = () => {
                 撰述
             </h3>
               <p>
-                陳妤 | 高宜鈴
+                陳妤 / 高宜鈴
             </p>
             </RoleItem>
             <RoleItem>
@@ -194,12 +240,12 @@ export const Content = () => {
                 校對
             </h3>
               <p>
-                陳妤 | 陳雯俐 | 高宜鈴
+                陳妤 / 陳雯俐 / 高宜鈴
             </p>
             </RoleItem>
             <RoleItem>
               <h3>
-                網頁設計
+                程式設計
             </h3>
               <p>
                 蔡秋圓
@@ -210,7 +256,7 @@ export const Content = () => {
                 攝影
             </h3>
               <p>
-                李瑞霖 | 高宜鈴 | 蔡秋圓
+                李瑞霖 / 高宜鈴 / 蔡秋圓
             </p>
             </RoleItem>
             <RoleItem>
@@ -218,7 +264,7 @@ export const Content = () => {
                 圖片來源
             </h3>
               <p>
-                立霧工作坊 | 陳雯俐
+                立霧工作坊 / 陳雯俐
             </p>
             </RoleItem>
             <RoleItem>
@@ -226,11 +272,11 @@ export const Content = () => {
                 特別感謝
             </h3>
               <p>
-                陳雯俐 | Darren Tesar | 江姊 | 鄧曉蔚 | 張恩滿 | 周王
+                陳雯俐 / Darren Tesar / 江姊 / 鄧曉蔚 / 張恩滿 / 周王
             </p>
             </RoleItem>
           </RoleList>
-        </AcknowledgementWrapper>
+        </BlockWrapper>
       </Wrapper>
       <Footer />
     </>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 import { Color, FontWeight } from 'styles';
 
 /** Style */
@@ -14,6 +14,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${responsive.tablet`
+    flex-direction: column;
+    padding: 20px 30px;
+  `}
 `;
 
 const HeadlineWrapper = styled.div`
@@ -23,14 +28,27 @@ const HeadlineWrapper = styled.div`
   justify-content: center;
   font-weight: ${FontWeight.BOLD};
   line-height: 1.5;
+
+  ${responsive.tablet`
+    margin-bottom: 15px;
+  `}
 `;
 
 const HeadlineTitle = styled.h3`
   ${getFontSize('LARGE')};
+
+  ${responsive.mobile`
+    letter-spacing: 12px;
+    text-indent: 13px;
+  `}
 `;
 
 const HeadlineSubtitle = styled.h4`
   font-size: 0.75rem;
+
+  ${responsive.tablet`
+    letter-spacing: 1px;
+  `}
 `;
 
 const LinkWrapper = styled.div`
@@ -39,7 +57,20 @@ const LinkWrapper = styled.div`
 
   > a:not(:last-of-type) {
     margin-right: 50px;
+
+    ${responsive.tablet`
+      margin-right: 30px;
+    `}
+
+    ${responsive.mobile`
+      margin: 0;
+      margin-bottom: 10px;
+    `}
   }
+
+  ${responsive.mobile`
+    flex-direction: column;
+  `}
 `;
 
 const LinkItem = styled.span`

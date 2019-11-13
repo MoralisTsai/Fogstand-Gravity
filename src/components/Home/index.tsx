@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { responsive } from 'helpers';
 import { Footer } from 'components/_Shared/Footer';
 
 import {
@@ -17,6 +18,14 @@ import {
 
 const BlockWrapper = styled.div`
   margin-bottom: 50px;
+
+  ${responsive.tablet`
+    margin-bottom: 40px;
+  `}
+
+  ${responsive.mobile`
+    margin-bottom: 30px;
+  `}
 `;
 
 /** End */
@@ -35,7 +44,7 @@ export const Home: React.FC<{}> = () => {
       <BlockWrapper>
         <Introduction />
       </BlockWrapper>
-      {/* <BlockWrapper>
+      <BlockWrapper>
         <GalleryIntro />
       </BlockWrapper>
       <BlockWrapper>
@@ -47,7 +56,7 @@ export const Home: React.FC<{}> = () => {
       <BlockWrapper>
         <Epilogue />
       </BlockWrapper>
-      <Footer /> */}
+      <Footer />
     </div>
   )
 };

@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
+import { Link } from 'react-router-dom';
 
 import { getFontSize } from 'helpers';
 import { Color, FontWeight } from 'styles';
+
+import { Url } from 'ts/Url';
 
 /** Style */
 
@@ -26,6 +29,7 @@ const FeatureBlock = styled.div`
   font-weight: ${FontWeight.BOLD};
   box-shadow: 2px 1px 8px ${rgba(Color.COD_GRAY, 0.4)};
   margin: auto;
+  line-height: 1.5;
 `;
 
 /** End */
@@ -34,11 +38,15 @@ const FeatureBlock = styled.div`
 export const Banner = () => {
   return (
     <Wrapper>
-      <FeatureBlock>
-        立新
-        <br />
-        引力
-</FeatureBlock>
+      <Link
+        to={Url.HOME}
+      >
+        <FeatureBlock>
+          立新
+          <br />
+          引力
+        </FeatureBlock>
+      </Link>
     </Wrapper>
   );
 };

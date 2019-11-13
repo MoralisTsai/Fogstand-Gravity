@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 import { Color } from 'styles';
+import { responsive } from 'helpers';
 
 export const ContentWrapper = styled.div`
   max-width: 700px;
   width: 100%;
   margin: auto;
   text-align: justify;
+  padding: 0 50px;
+
+  ${responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 export const PrefaceWrapper = styled.p`
@@ -19,6 +25,10 @@ export const PrefaceWrapper = styled.p`
   margin: 50px auto 40px;
   font-weight: 700;
   position: relative;
+
+  ${responsive.tablet`
+    columns: initial;
+  `}
 
   &::before {
     content: "";

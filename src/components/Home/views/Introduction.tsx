@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
+import { Element as ScrollEl } from 'react-scroll';
 
 import { FontWeight, Color } from 'styles';
 import { getFontSize, responsive } from 'helpers';
+
+import { useAnimateScroll } from 'hooks';
 
 /** Style */
 
@@ -21,7 +24,7 @@ const ImagePosed = posed.div({
   },
 });
 
-const Wrapper = styled.div`
+const Wrapper = styled(ScrollEl)`
   display: flex;
   align-items: stretch;
   flex-flow: row nowrap;
@@ -65,6 +68,14 @@ const ContentWrapper = styled(PosedContent)`
   flex: 1 1 512px;
   padding: 30px 50px;
   position: relative;
+
+  ${responsive.tablet`
+    padding: 0 50px;
+  `}
+
+  ${responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 const Title = styled.h3`
@@ -111,27 +122,14 @@ const InnerParagraph = styled.p`
 /** End */
 
 export const Introduction = () => {
-  const [isDisplay, setDisplay] = React.useState(false);
-  const imgEl = React.useRef(null);
-  React.useEffect(() => {
-    const scrollAction = () => {
-      const position = imgEl.current.getBoundingClientRect().top;
-      console.log(position);
-
-      setDisplay(position < 600);
-    };
-
-    window.addEventListener('scroll', scrollAction);
-
-    return (() => {
-      window.removeEventListener('scroll', scrollAction);
-    })
-  }, []);
+  const [isDisplay, el] = useAnimateScroll(600);
 
   return (
-    <Wrapper>
+    <Wrapper
+      name="js-introduction"
+    >
       <ImageWrapper
-        ref={imgEl}
+        ref={el}
         pose={isDisplay ? 'visible' : 'hidden'}
       />
       <ContentWrapper

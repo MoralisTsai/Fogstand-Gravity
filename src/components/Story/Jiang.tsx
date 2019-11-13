@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { jiang } from 'static';
 import { Url } from 'ts/Url';
 import { compose } from 'helpers';
 
+import { jiang } from './static';
 import { withStory } from './hoc/withStory';
 
 import { ContentInnerText } from 'components/_Shared/Story';
@@ -44,6 +44,7 @@ export default compose(
     <BaseComponent
       {...props}
       character={jiang}
+      customWidth="450px"
     />
   ),
   withStory,

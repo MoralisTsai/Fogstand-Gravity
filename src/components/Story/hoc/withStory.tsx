@@ -12,6 +12,7 @@ import { Character } from 'ts/Character';
 
 interface WithStoryProps {
   character: Character;
+  customWidth?: string;
 }
 
 export const withStory = <P extends {}>(
@@ -19,6 +20,7 @@ export const withStory = <P extends {}>(
 ): React.FC<P & WithStoryProps> => (props) => {
   const {
     character,
+    customWidth,
   } = props;
 
   return (
@@ -28,6 +30,7 @@ export const withStory = <P extends {}>(
         header={character.header}
         description={character.description}
         coverImg={character.cover}
+        customWidth={customWidth}
       />
       <ContentWrapper>
         <PrefaceWrapper>

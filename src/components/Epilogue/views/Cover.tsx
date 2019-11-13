@@ -1,39 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
-import { rgba } from 'polished';
 
-import { getFontSize } from 'helpers';
-import { Color, FontWeight } from 'styles';
 import { CoverLogo } from 'components/_Shared/CoverLogo';
 
-/** Style */
-
-const CoverWrapper = styled.div`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259917/post-main-1_qmoph9.jpg');
-  background-size: cover;
-  height: 400px;
-  position: relative;
-  margin-bottom: 50px;
-`;
-
-const CoverTitle = styled.h2`
-  ${getFontSize('LARGE')};
-  padding: 5px 30px;
-  background-color: ${rgba(Color.COD_GRAY, 0.3)};
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: relative;
-  color: ${Color.WHITE};
-  font-weight: ${FontWeight.BOLD};
-  display: inline-block;
-`;
-
-/** End */
+import {
+  CoverWrapper,
+  CoverTitle,
+} from 'styles/Article';
 
 export const Cover = () => {
   return (
-    <CoverWrapper>
+    <CoverWrapper
+      background="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/post-main-1_qmoph9.jpg"
+    >
       <CoverTitle>
         後記
       </CoverTitle>

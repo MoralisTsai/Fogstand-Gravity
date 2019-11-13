@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { FontWeight } from 'styles';
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 
 import { ReadMoreButton } from 'components/_Shared/ReadMore';
 
@@ -16,7 +16,11 @@ const Wrapper = styled.div`
   align-items: center;
   flex-flow: column nowrap;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 50px;
+
+  ${responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 const Title = styled.h3`

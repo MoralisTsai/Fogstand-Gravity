@@ -70,7 +70,7 @@ export const App: React.FC<{}> = () => (
       </Route>
       <Route
         exact
-        path='/'
+        path={Url.HOME}
       >
         <Home />
       </Route>

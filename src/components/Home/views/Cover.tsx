@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { Color, FontWeight } from 'styles';
 
@@ -16,6 +16,52 @@ const OuterWrapper = styled.div`
   background-size: cover;
   min-height: calc(100vh - 140px);
   position: relative;
+
+  ${responsive.tablet`
+    min-height: calc(100vh - 116px);
+  `}
+
+  ${responsive.mobile`
+    min-height: calc(100vh - 92px);
+  `}
+`;
+
+export const TitleSlide = keyframes`
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 50px;
+  }
+`;
+
+export const TitleSlideLaptop = keyframes`
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 40px;
+  }
+`;
+
+export const TitleSlideMobile = keyframes`
+  from {
+    opacity: 0;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  to {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const Title = styled.h2`
@@ -27,6 +73,7 @@ const Title = styled.h2`
   line-height: 1;
   position: absolute;
   text-align: left;
+  animation: ${TitleSlide} 1000ms ease-in-out;
 
   span {
     display: block;
@@ -41,6 +88,7 @@ const Title = styled.h2`
     left: 40px;
     bottom: 40px;
     font-size: 4rem;
+    animation: ${TitleSlideLaptop} 1000ms ease-in-out;
   `}
 
   ${responsive.tablet`
@@ -54,6 +102,7 @@ const Title = styled.h2`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: ${TitleSlideMobile} 1000ms ease-in-out;
   `}
 `;
 

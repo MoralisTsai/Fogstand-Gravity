@@ -1,20 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Element as ScrollEl } from 'react-scroll';
 
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 import { FontWeight } from 'styles';
 
 import { ReadMoreButton } from 'components/_Shared/ReadMore';
 
 /** Style */
 
-const Wrapper = styled.div`
+const Wrapper = styled(ScrollEl)`
   position: relative;
   max-width: 1440px;
   margin: auto;
   display: flex;
   flex-wrap: nowrap;
+
+  ${responsive.tablet`
+    flex-flow: column nowrap;
+  `}
 `;
 
 const CoverWrapper = styled.div`
@@ -23,6 +28,13 @@ const CoverWrapper = styled.div`
   background-position: 34%;
   background-size: cover;
   flex: 2 1 512px;
+
+  ${responsive.tablet`
+    margin-bottom: 30px;
+    flex: initial;
+    width: 100%;
+    height: 500px;
+  `}
 `;
 
 const ContentWrapper = styled.div`
@@ -31,6 +43,15 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  ${responsive.tablet`
+    padding: 0 50px;
+    flex: initial;
+  `}
+
+  ${responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 const Title = styled.h3`
@@ -48,7 +69,9 @@ const InnerText = styled.p`
 
 export const Epilogue = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      name="js-epilogue"
+    >
       <CoverWrapper />
       <ContentWrapper>
         <Title>

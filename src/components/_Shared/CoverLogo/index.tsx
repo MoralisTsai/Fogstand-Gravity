@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { Color, FontWeight } from 'styles';
+import { responsive } from 'helpers';
+
+import { Url } from 'ts/Url';
 
 /** Style */
 
@@ -17,6 +20,11 @@ const Wrapper = styled.span`
   color: ${Color.WHITE};
   z-index: 100;
   line-height: 1.3;
+
+  ${responsive.mobile`
+    left: 20px;
+    top: 20px;
+  `}
 `;
 
 /** End */
@@ -24,7 +32,7 @@ const Wrapper = styled.span`
 export const CoverLogo = () => {
   return (
     <Link
-      to="/"
+      to={Url.HOME}
     >
       <Wrapper>
         立新

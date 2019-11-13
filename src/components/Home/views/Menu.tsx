@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
+import { scroller } from 'react-scroll';
 
 import { Color, FontWeight } from 'styles';
 import { getFontSize, responsive } from 'helpers'
@@ -99,13 +100,21 @@ const MenuItem = styled.li`
 /** End */
 
 export const Menu: React.FC<{}> = () => {
+  const menuItemClickAction = (name: string) => {
+    scroller.scrollTo(name, {
+      duration: 1500,
+      smooth: true,
+    });
+  }
   return (
     <Wrapper>
       <ListWrapper>
         <MenuItem>
           首頁
         </MenuItem>
-        <MenuItem>
+        <MenuItem
+          onClick={() => menuItemClickAction('js-introduction')}
+        >
           簡介
         </MenuItem>
         <FeatureBlock>
@@ -115,10 +124,13 @@ export const Menu: React.FC<{}> = () => {
         </FeatureBlock>
         <MenuItem
           isRightSide
+          onClick={() => menuItemClickAction('js-character')}
         >
           人物
         </MenuItem>
-        <MenuItem>
+        <MenuItem
+          onClick={() => menuItemClickAction('js-epilogue')}
+        >
           後記
         </MenuItem>
       </ListWrapper>

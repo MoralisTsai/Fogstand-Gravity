@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 
+import { responsive } from 'helpers';
+
+import { useAnimateScroll } from 'hooks';
+
 /** Style */
 
 const Wrapper = styled.div`
   position: relative;
-  margin-bottom: 80px;
 `;
 
 const Parallax = styled.div`
@@ -16,13 +19,18 @@ const Parallax = styled.div`
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
+
+  ${responsive.tablet`
+    min-height: 100vh;
+    background-position: top center;
+    background-attachment: initial;
+  `}
 `;
 
 const PosedContent = posed.div({
   visible: {
     transition: {
       duration: 1000,
-      delay: 1000,
     },
     opacity: 1,
     bottom: 50,
@@ -39,6 +47,10 @@ const ContentWrapper = styled(PosedContent)`
   text-align: justify;
   display: flex;
   flex-flow: row nowrap;
+
+  ${responsive.tablet`
+    display: none;
+  `}
 `;
 
 const Avatar = styled.div`
@@ -54,26 +66,13 @@ const ChatWrapper = styled.div`
   padding: 10px 15px;
   border-radius: 10px;
   max-width: 450px;
+  width: 100%;
 `;
 
 /** End */
 
 export const Banner = () => {
-  const [isDisplay, setDisplay] = React.useState(false);
-  const el = React.useRef(null);
-  React.useEffect(() => {
-    const scrollAction = () => {
-      const position = el.current.getBoundingClientRect().top;
-
-      setDisplay(position < 1000);
-    };
-
-    window.addEventListener('scroll', scrollAction);
-
-    return (() => {
-      window.removeEventListener('scroll', scrollAction);
-    })
-  }, []);
+  const [isDisplay, el] = useAnimateScroll(800);
   return (
     <Wrapper>
       <Parallax />

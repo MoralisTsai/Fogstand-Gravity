@@ -1,30 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
 
-/** Style */
+import {
+  Wrapper,
+  InnerText,
+  Figure,
+} from 'styles/Article';
 
-const Wrapper = styled.div`
-  max-width: 700px;
-  width: 100%;
-  margin: auto;
-`;
-
-const InnerText = styled.p`
-  text-indent: 30px;
-  text-align: justify;
-  margin-bottom: 20px;
-`;
-
-const Figure = styled.img`
-  width: 100%;
-  margin-bottom: 20px;
-  display: block;
-`;
-
-/** End */
+import { Url } from 'ts/Url';
 
 export const Content = () => {
   return (
@@ -62,7 +47,7 @@ export const Content = () => {
       <ArticleEnd />
       <InnerNav
         left={{
-          path: '/',
+          path: Url.HOME,
           text: '首頁',
         }}
       />

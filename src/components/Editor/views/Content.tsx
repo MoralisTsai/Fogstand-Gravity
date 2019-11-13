@@ -25,7 +25,7 @@ const AboutUsWrapper = styled.div`
 const TitleBlock = styled.div`
   background-color: ${Color.QUILL_GRAY};
   padding: 10px 24px;
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   display: inline-block;
   font-weight: ${FontWeight.BOLD};
   margin-right: 50px;
@@ -59,7 +59,7 @@ const EditorItem = styled.div`
 
   h4 {
     font-weight: ${FontWeight.BOLD};
-    ${getFontSize('S7')};
+    ${getFontSize('SMALL')};
     margin-bottom: 20px;
     text-align: center;
   }

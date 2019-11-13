@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
   figcaption {
     color: ${lighten(0.35, Color.COD_GRAY)};
-    ${getFontSize('S7')};
+    ${getFontSize('SMALL')};
     position: relative;
     padding-top: 20px;
 

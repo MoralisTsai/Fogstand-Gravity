@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 
 import { FontWeight, Color } from 'styles';
-import { getFontSize } from 'helpers';
+import { getFontSize, responsive } from 'helpers';
 
 /** Style */
 
@@ -28,6 +28,10 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   max-width: 1440px;
   margin: auto;
+
+  ${responsive.tablet`
+    flex-flow: column nowrap;
+  `}
 `;
 
 const ImageWrapper = styled(ImagePosed)`
@@ -37,6 +41,10 @@ const ImageWrapper = styled(ImagePosed)`
   flex: 1 1 512px;
   margin-right: 20px;
   position: relative;
+
+  ${responsive.tablet`
+    display: none;
+  `}
 `;
 
 const PosedContent = posed.div({
@@ -60,7 +68,7 @@ const ContentWrapper = styled(PosedContent)`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 20px;
@@ -108,8 +116,9 @@ export const Introduction = () => {
   React.useEffect(() => {
     const scrollAction = () => {
       const position = imgEl.current.getBoundingClientRect().top;
+      console.log(position);
 
-      setDisplay(position < 400);
+      setDisplay(position < 600);
     };
 
     window.addEventListener('scroll', scrollAction);

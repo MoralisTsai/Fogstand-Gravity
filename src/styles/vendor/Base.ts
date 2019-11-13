@@ -16,7 +16,7 @@ export const Base = createGlobalStyle`
   html body {
     font-family: 'Noto Sans TC', sans-serif;
     line-height: 2;
-    ${getFontSize('S6')};
+    ${getFontSize('NORMAL')};
     letter-spacing: 3px;
     font-weight: ${FontWeight.THIN};
     color: ${Color.COD_GRAY};

@@ -73,7 +73,7 @@ const CoverContent = styled.div`
 `;
 
 const CoverHeading = styled.h2`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   font-weight: ${FontWeight.BOLD};
 `;
 

@@ -3,9 +3,13 @@ import styled from 'styled-components';
 
 import { Color, FontWeight } from 'styles';
 
-import { FadeInUp } from 'styles/Animation';
+import { responsive } from 'helpers';
 
 /** Style */
+
+const Wrapper = styled.div`
+  position: relative;
+`;
 
 const OuterWrapper = styled.div`
   background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259914/front-cover_hxcg1b.jpg');
@@ -14,21 +18,14 @@ const OuterWrapper = styled.div`
   position: relative;
 `;
 
-const InnerContent = styled.div`
-  padding: 25px 50px;
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  text-align: center;
-  animation: ${FadeInUp} 1500ms ease-in-out;
-`;
-
 const Title = styled.h2`
-  font-size: 5rem;
+  bottom: 50px;
   color: ${Color.WHITE};
+  font-size: 5rem;
   font-weight: ${FontWeight.BOLD};
+  left: 50px;
   line-height: 1;
-  margin-bottom: 20px;
+  position: absolute;
   text-align: left;
 
   span {
@@ -39,24 +36,41 @@ const Title = styled.h2`
       padding: 10px;
     }
   }
+
+  ${responsive.laptop`
+    left: 40px;
+    bottom: 40px;
+    font-size: 4rem;
+  `}
+
+  ${responsive.tablet`
+    font-size: 3rem;
+  `}
+
+  ${responsive.mobile`
+    font-size: 2.5rem;
+    text-align: center;
+    bottom: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  `}
 `;
 
 /** End */
 
 export const Cover = () => {
   return (
-    <>
+    <Wrapper>
       <OuterWrapper />
-      <InnerContent>
-        <Title>
-          <span>
-            FOGSTAND
-          </span>
-          <span>
-            GRAVITY
-          </span>
-        </Title>
-      </InnerContent>
-    </>
+      <Title>
+        <span>
+          FOGSTAND
+        </span>
+        <span>
+          GRAVITY
+        </span>
+      </Title>
+    </Wrapper>
   );
 };

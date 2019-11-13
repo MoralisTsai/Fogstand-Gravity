@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const FeatureBlock = styled.div`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   background-color: ${Color.COD_GRAY};
   padding: 10px 20px;
   color: ${Color.WHITE};

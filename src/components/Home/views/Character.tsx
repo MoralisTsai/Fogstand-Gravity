@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   font-weight: ${FontWeight.BOLD};
   text-align: center;
   margin-bottom: 50px;

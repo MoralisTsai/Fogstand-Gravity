@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
 
 import { Color, FontWeight } from 'styles';
-import { getFontSize } from 'helpers'
+import { getFontSize, responsive } from 'helpers'
 
 /** Style */
 
@@ -22,13 +22,14 @@ const ListWrapper = styled.ul`
 `;
 
 const FeatureBlock = styled.li`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   line-height: 1.5;
   background-color: ${Color.COD_GRAY};
   padding: 10px 20px;
   color: ${Color.WHITE};
   font-weight: ${FontWeight.BOLD};
   box-shadow: 2px 1px 8px ${rgba(Color.COD_GRAY, 0.4)};
+  flex-shrink: 0;
 `;
 
 interface MenuItemProps {
@@ -45,6 +46,10 @@ const MenuItem = styled.li`
   position: relative;
   transition-property: color;
   transition-duration: 0.3s;
+
+  ${responsive.tablet`
+    display: none;
+  `}
 
   &::before {
     content: "";
@@ -76,10 +81,18 @@ const MenuItem = styled.li`
 
   &:not(:last-of-type) {
     margin-right: 100px;
+
+    ${responsive.laptop`
+      margin-right: 50px;
+    `}
   }
 
   ${(props: MenuItemProps) => props.isRightSide && css`
     margin-left: 100px;
+
+    ${responsive.laptop`
+      margin-left: 50px;
+    `}
   `}
 `;
 

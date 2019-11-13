@@ -4,25 +4,37 @@ import { FontSize } from 'styles/Font';
 import { responsive } from './responsive';
 
 export const getFontSize = (size?: keyof typeof FontSize) => {
-  if (size === 'S3') {
+  if (size === 'LARGE') {
     return css`
-      font-size: ${FontSize.S3};
+      font-size: ${FontSize.LARGE};
+
+      ${responsive.tablet`
+        font-size: 2rem;
+      `}
+
+      ${responsive.mobile`
+        font-size: 1.5rem;
+      `}
     `;
   }
 
-  if (size === 'S6') {
+  if (size === 'NORMAL') {
     return css`
-      font-size: ${FontSize.S6};
+      font-size: ${FontSize.NORMAL};
+
+      ${responsive.tablet`
+        font-size: 1rem;
+      `}
     `;
   }
 
-  if (size === 'S7') {
+  if (size === 'SMALL') {
     return css`
-      font-size: ${FontSize.S7};
+      font-size: ${FontSize.SMALL};
     `;
   }
 
   return css`
-    font-size: ${FontSize.S6};
+    font-size: ${FontSize.NORMAL};
   `;
 };

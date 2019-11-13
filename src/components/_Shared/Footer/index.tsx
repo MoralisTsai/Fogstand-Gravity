@@ -26,7 +26,7 @@ const HeadlineWrapper = styled.div`
 `;
 
 const HeadlineTitle = styled.h3`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
 `;
 
 const HeadlineSubtitle = styled.h4`

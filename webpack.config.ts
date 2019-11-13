@@ -15,6 +15,7 @@ const config: webpack.Configuration = {
     hot: true,
     clientLogLevel: 'none',
     historyApiFallback: true,
+    host: '0.0.0.0',
   },
   entry: ['react-hot-loader/patch', './src/index.tsx'],
   output: {

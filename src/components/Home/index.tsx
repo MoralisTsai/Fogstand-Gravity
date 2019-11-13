@@ -35,7 +35,7 @@ export const Home: React.FC<{}> = () => {
       <BlockWrapper>
         <Introduction />
       </BlockWrapper>
-      <BlockWrapper>
+      {/* <BlockWrapper>
         <GalleryIntro />
       </BlockWrapper>
       <BlockWrapper>
@@ -47,7 +47,7 @@ export const Home: React.FC<{}> = () => {
       <BlockWrapper>
         <Epilogue />
       </BlockWrapper>
-      <Footer />
+      <Footer /> */}
     </div>
   )
 };

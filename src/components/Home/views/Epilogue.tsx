@@ -34,7 +34,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${getFontSize('S3')};
+  ${getFontSize('LARGE')};
   margin-bottom: 30px;
   font-weight: ${FontWeight.BOLD};
   text-align: center;

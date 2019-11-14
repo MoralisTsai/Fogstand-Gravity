@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontWeight } from 'styles';
 import { getFontSize, responsive } from 'helpers';
 
-import { ReadMoreButton } from 'components/_Shared/ReadMore';
+import { ReadMoreButton } from 'styles/ReadMore';
 
 /** Style */
 

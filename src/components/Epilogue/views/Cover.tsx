@@ -7,15 +7,13 @@ import {
   CoverTitle,
 } from 'styles/Article';
 
-export const Cover = () => {
-  return (
-    <CoverWrapper
-      background="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/post-main-1_qmoph9.jpg"
-    >
-      <CoverTitle>
-        後記
-      </CoverTitle>
-      <CoverLogo />
-    </CoverWrapper>
-  );
-};
+export const Cover: React.FC<{}> = () => (
+  <CoverWrapper
+    background="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/post-main-1_qmoph9.jpg"
+  >
+    <CoverTitle>
+      後記
+    </CoverTitle>
+    <CoverLogo />
+  </CoverWrapper>
+);

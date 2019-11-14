@@ -7,12 +7,10 @@ import {
   Content,
 } from './views';
 
-export const About = () => {
-  return (
-    <>
-      <Cover />
-      <Content />
-      <Footer />
-    </>
-  )
-}
+export const About: React.FC<{}> = () => (
+  <>
+    <Cover />
+    <Content />
+    <Footer />
+  </>
+);

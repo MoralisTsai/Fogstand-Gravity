@@ -7,15 +7,13 @@ import {
   CoverTitle,
 } from 'styles/Article';
 
-export const Cover = () => {
-  return (
-    <CoverWrapper
-      background="https://res.cloudinary.com/defykcau3/image/upload/v1573259914/workshop-2_gzt6yq.jpg"
-    >
-      <CoverTitle>
-        工作坊簡介
-      </CoverTitle>
-      <CoverLogo />
-    </CoverWrapper>
-  );
-};
+export const Cover: React.FC<{}> = () => (
+  <CoverWrapper
+    background="https://res.cloudinary.com/defykcau3/image/upload/v1573259914/workshop-2_gzt6yq.jpg"
+  >
+    <CoverTitle>
+      工作坊簡介
+    </CoverTitle>
+    <CoverLogo />
+  </CoverWrapper>
+);

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { getFontSize } from 'helpers';
 import { Color } from 'styles';
 
 export const ReadMoreButton = styled.span`

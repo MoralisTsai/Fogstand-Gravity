@@ -29,16 +29,14 @@ const Wrapper = styled.span`
 
 /** End */
 
-export const CoverLogo = () => {
-  return (
-    <Link
-      to={Url.HOME}
-    >
-      <Wrapper>
-        立新
-        <br />
-        引力
-      </Wrapper>
-    </Link>
-  );
-};
+export const CoverLogo: React.FC<{}> = () => (
+  <Link
+    to={Url.HOME}
+  >
+    <Wrapper>
+      立新
+      <br />
+      引力
+    </Wrapper>
+  </Link>
+);

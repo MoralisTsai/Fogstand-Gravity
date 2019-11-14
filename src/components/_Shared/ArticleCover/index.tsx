@@ -144,26 +144,24 @@ export const ArticleCover: React.FC<ArticleCoverProps> = (props) => {
     customWidth,
   } = props;
   return (
-    <>
-      <Cover>
-        <Background
-          backgroundImage={coverImg}
-        />
-        <CoverLogo />
-        <CoverContent
-          customWidth={customWidth}
-        >
-          <CoverHeading>
-            {name}
-          </CoverHeading>
-          <CoverSubHeading>
-            {header}
-          </CoverSubHeading>
-          <CoverInner>
-            {description}
-          </CoverInner>
-        </CoverContent>
-      </Cover>
-    </>
+    <Cover>
+      <Background
+        backgroundImage={coverImg}
+      />
+      <CoverLogo />
+      <CoverContent
+        customWidth={customWidth}
+      >
+        <CoverHeading>
+          {name}
+        </CoverHeading>
+        <CoverSubHeading>
+          {header}
+        </CoverSubHeading>
+        <CoverInner>
+          {description}
+        </CoverInner>
+      </CoverContent>
+    </Cover>
   )
 }

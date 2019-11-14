@@ -26,8 +26,6 @@ const Wrapper = styled.div`
 
 /** End */
 
-export const ArticleEnd = () => {
-  return (
-    <Wrapper />
-  );
-};
+export const ArticleEnd: React.FC<{}> = () => (
+  <Wrapper />
+);

@@ -121,7 +121,7 @@ const InnerParagraph = styled.p`
 
 /** End */
 
-export const Introduction = () => {
+export const Introduction: React.FC<{}> = () => {
   const [isDisplay, el] = useAnimateScroll(600);
 
   return (

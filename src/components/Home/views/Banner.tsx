@@ -71,7 +71,7 @@ const ChatWrapper = styled.div`
 
 /** End */
 
-export const Banner = () => {
+export const Banner: React.FC<{}> = () => {
   const [isDisplay, el] = useAnimateScroll(800);
   return (
     <Wrapper>

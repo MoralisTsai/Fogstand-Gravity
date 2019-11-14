@@ -21,12 +21,6 @@ export const InnerText = styled.p`
   margin-bottom: 20px;
 `;
 
-export const Figure = styled.img`
-  width: 100%;
-  margin-bottom: 20px;
-  display: block;
-`;
-
 interface CoverWrapperProps {
   background: string;
 }

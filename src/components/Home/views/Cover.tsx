@@ -108,18 +108,16 @@ const Title = styled.h2`
 
 /** End */
 
-export const Cover = () => {
-  return (
-    <Wrapper>
-      <OuterWrapper />
-      <Title>
-        <span>
-          FOGSTAND
-        </span>
-        <span>
-          GRAVITY
-        </span>
-      </Title>
-    </Wrapper>
-  );
-};
+export const Cover: React.FC<{}> = () => (
+  <Wrapper>
+    <OuterWrapper />
+    <Title>
+      <span>
+        FOGSTAND
+      </span>
+      <span>
+        GRAVITY
+      </span>
+    </Title>
+  </Wrapper> 
+);

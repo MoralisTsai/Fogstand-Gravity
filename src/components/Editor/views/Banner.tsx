@@ -34,19 +34,16 @@ const FeatureBlock = styled.div`
 
 /** End */
 
-
-export const Banner = () => {
-  return (
-    <Wrapper>
-      <Link
-        to={Url.HOME}
-      >
-        <FeatureBlock>
-          立新
-          <br />
-          引力
-        </FeatureBlock>
-      </Link>
-    </Wrapper>
-  );
-};
+export const Banner: React.FC<{}> = () => (
+  <Wrapper>
+    <Link
+      to={Url.HOME}
+    >
+      <FeatureBlock>
+        立新
+        <br />
+        引力
+      </FeatureBlock>
+    </Link>
+  </Wrapper>
+);

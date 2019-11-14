@@ -79,40 +79,38 @@ const LinkItem = styled.span`
 
 /** End */
 
-export const Footer = () => {
-  return (
-    <Wrapper>
-      <HeadlineWrapper>
-        <HeadlineTitle>
-          立新引力
-        </HeadlineTitle>
-        <HeadlineSubtitle>
-          FOGSTAND GRAVITY
-        </HeadlineSubtitle>
-      </HeadlineWrapper>
-      <LinkWrapper>
-        <Link
-          to='/editor'
-        >
-          <LinkItem>
-            關於我們
-          </LinkItem>
-        </Link>
-        <a
-          href='https://www.fogstand.com/'
-          rel="noopener noreferrer"
-          target='_blank'
-        >
-          <LinkItem>
-            關於立霧
-          </LinkItem>
-        </a>
-        <a href='mailto:moralis.tsai@gmail.com'>
-          <LinkItem>
-            聯絡我們
-          </LinkItem>
-        </a>
-      </LinkWrapper>
-    </Wrapper>
-  )
-}
+export const Footer: React.FC<{}> = () => (
+  <Wrapper>
+    <HeadlineWrapper>
+      <HeadlineTitle>
+        立新引力
+      </HeadlineTitle>
+      <HeadlineSubtitle>
+        FOGSTAND GRAVITY
+      </HeadlineSubtitle>
+    </HeadlineWrapper>
+    <LinkWrapper>
+      <Link
+        to='/editor'
+      >
+        <LinkItem>
+          關於我們
+        </LinkItem>
+      </Link>
+      <a
+        href='https://www.fogstand.com/'
+        rel="noopener noreferrer"
+        target='_blank'
+      >
+        <LinkItem>
+          關於立霧
+        </LinkItem>
+      </a>
+      <a href='mailto:moralis.tsai@gmail.com'>
+        <LinkItem>
+          聯絡我們
+        </LinkItem>
+      </a>
+    </LinkWrapper>
+  </Wrapper>
+);

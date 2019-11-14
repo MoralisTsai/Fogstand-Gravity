@@ -6,10 +6,11 @@ import { compose } from 'helpers';
 import { wang } from './static';
 import { withStory } from './hoc/withStory';
 
-import { ContentInnerText } from 'components/_Shared/Story';
 import { Figure } from 'components/_Shared/Figure';
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
+
+import { ContentInnerText } from './styles/Common';
 
 export const Wang: React.FC<{}> = () => {
   return (

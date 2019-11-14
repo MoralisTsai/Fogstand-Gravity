@@ -5,11 +5,9 @@ import {
   Content,
 } from './views'
 
-export const Editor = () => {
-  return (
-    <>
-      <Banner />
-      <Content />
-    </>
-  );
-};
+export const Editor: React.FC<{}> = () => (
+  <>
+    <Banner />
+    <Content />
+  </>
+);

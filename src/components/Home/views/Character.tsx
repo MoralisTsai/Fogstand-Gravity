@@ -119,7 +119,6 @@ const ItemWrapper = styled.div`
 
   }
 
-
   ${responsive.tablet`
     max-width: 500px;
     &:not(:last-of-type) {

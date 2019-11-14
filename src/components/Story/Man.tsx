@@ -6,9 +6,10 @@ import { compose } from 'helpers';
 import { man } from './static';
 import { withStory } from './hoc/withStory';
 
-import { ContentInnerText } from 'components/_Shared/Story';
 import { ArticleEnd } from 'components/_Shared/ArticleEnd';
 import { InnerNav } from 'components/_Shared/InnerNav';
+
+import { ContentInnerText } from './styles/Common';
 
 const Man: React.FC<{}> = () => {
   return (

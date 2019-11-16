@@ -7,23 +7,65 @@ import {
 
 import { Url } from 'ts/Url';
 
-import { Home } from './components/Home';
-import { About } from './components/About';
-import { Epilogue } from './components/Epilogue';
-import { Editor } from './components/Editor';
-import {
-  Wenli,
-  Darren,
-  Jiang,
-  Wei,
-  Man,
-  Wang,
-} from './components/Story';
+// import { Home } from './components/Home';
+// import { About } from './components/About';
+// import { Epilogue } from './components/Epilogue';
+// import { Editor } from './components/Editor';
+// import {
+//   Wenli,
+//   Darren,
+//   Jiang,
+//   Wei,
+//   Man,
+//   Wang,
+// } from './components/Story';
+
+// const Home = React.lazy(() => import('components/Home'));
+// const Editor = React.lazy(() => import('components/Editor'));
+
+interface DynamicImportProps {
+  load?: () => any;
+}
+
+class DynamicImport extends React.Component<DynamicImportProps> {
+  state = {
+    component: null
+  }
+  componentDidMount () {
+    this.props.load()
+      .then((component) => {
+        this.setState(() => ({
+          component: component.default ? component.default : component
+        }))
+      })
+  }
+  render() {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    return this.props.children(this.state.component)
+  }
+}
+
+const Home = (props) => (
+  <DynamicImport load={() => import('components/Home')}>
+    {(Component) => Component === null
+      ? <p>Loading</p>
+      : <Component {...props} />}
+  </DynamicImport>
+);
+
+const Editor = (props) => (
+  <DynamicImport load={() => import('components/Editor')}>
+    {(Component) => Component === null
+      ? <p>Loading</p>
+      : <Component {...props} />}
+  </DynamicImport>
+);
 
 export const App: React.FC<{}> = () => (
   <BrowserRouter>
     <Switch>
-      <Route
+      {/* <Route
         path={Url.WENLI}
       >
         <Wenli />
@@ -62,18 +104,25 @@ export const App: React.FC<{}> = () => (
         path={Url.EPILOGUE}
       >
         <Epilogue />
-      </Route>
-      <Route
+      </Route> */}
+      {/* <Route
         path={Url.EDITOR}
       >
+      <React.Suspense
+        fallback={<h1>Loading</h1>}
+      >
         <Editor />
-      </Route>
+      </React.Suspense>
+      </Route> */}
+      <Route
+        path={Url.EDITOR}
+        component={Editor}
+      />
       <Route
         exact
         path={Url.HOME}
-      >
-        <Home />
-      </Route>
+        component={Home}
+      />
     </Switch>
   </BrowserRouter>
 );

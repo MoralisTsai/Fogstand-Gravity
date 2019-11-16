@@ -5,9 +5,11 @@ import {
   Content,
 } from './views'
 
-export const Editor: React.FC<{}> = () => (
+const Editor: React.FC<{}> = () => (
   <>
     <Banner />
     <Content />
   </>
 );
+
+export default Editor;

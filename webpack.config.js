@@ -1,13 +1,13 @@
-import path from 'path';
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
-const config: webpack.Configuration = {
+const config = {
   mode: 'development',
   devtool: "inline-source-map",
   devServer: {
@@ -22,6 +22,7 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
+    chunkFilename: '[contenthash].bundle.js',
   },
   resolve: {
     extensions: [
@@ -81,4 +82,4 @@ const config: webpack.Configuration = {
   ],
 };
 
-export default config;
+module.exports = config;

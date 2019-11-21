@@ -38,7 +38,7 @@ const Wrapper = styled(ScrollEl)`
 `;
 
 const ImageWrapper = styled(ImagePosed)`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259915/sub-pic-3_cymzyk.jpg');
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259915/sub-pic-3_cymzyk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   flex: 1 1 512px;

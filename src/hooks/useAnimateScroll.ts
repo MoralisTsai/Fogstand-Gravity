@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import React from 'react';
 
 export const useAnimateScroll = (targetPos: number): [boolean, React.MutableRefObject<any>] => {
@@ -5,6 +6,7 @@ export const useAnimateScroll = (targetPos: number): [boolean, React.MutableRefO
   const el = React.useRef(null);
   React.useEffect(() => {
     const scrollAction = () => {
+      // @ts-ignore
       const position = el.current.getBoundingClientRect().top;
 
       setDisplay(position < targetPos);

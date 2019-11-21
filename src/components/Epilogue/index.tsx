@@ -7,10 +7,12 @@ import {
   Content,
 } from './views';
 
-export const Epilogue: React.FC<{}> = () => (
+const Epilogue: React.FC<{}> = () => (
   <>
     <Cover />
     <Content />
     <Footer />
   </>
 );
+
+export default Epilogue;

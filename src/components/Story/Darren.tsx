@@ -25,7 +25,7 @@ const Darren: React.FC<{}> = () => {
         ))
       }
       <Figure
-        url="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/darren-2_h2euxk.jpg"
+        url="https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259917/darren-2_h2euxk.jpg"
         caption="Darren將務實的陳雯俐比喻為向心力，理想化的自己則是離心力， 他覺得這種向內吸收與向外擴張的交互作用，會產生張力或緊張的氣氛，進而衍生出積極的工作模式。"
       />
       {

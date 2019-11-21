@@ -42,7 +42,7 @@ const PosedContent = posed.div({
 })
 
 const ContentWrapper = styled(PosedContent)`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259913/DotTest_sf6eyl.png');
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259913/DotTest_sf6eyl.png');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100%;

@@ -30,7 +30,7 @@ const BlockWrapper = styled.div`
 
 /** End */
 
-export const Home: React.FC<{}> = () => {
+const Home: React.FC<{}> = () => {
   React.useEffect(() => {
     return () => window.scrollTo(0, 0);
   }, []);
@@ -60,3 +60,5 @@ export const Home: React.FC<{}> = () => {
     </div>
   )
 };
+
+export default Home;

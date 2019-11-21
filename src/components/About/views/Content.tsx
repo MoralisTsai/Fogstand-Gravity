@@ -17,7 +17,7 @@ export const Content: React.FC<{}> = () => (
       通往花蓮機場的主要道路上，砂石車、汽車呼嘯而過。看著地圖上的指示，我們沿著花蓮某大賣場旁的小巷，走進了名為嘉里村的小村落。嘉里村在日據時代被稱作「加禮宛」，是著名的「加禮宛事件」發生地點——最初宜蘭的噶瑪蘭族遷居至加禮宛，後來被漢人佔據土地，他們與撒奇萊雅族聯合抗清但卻失敗，導致土地被佔，再加上阿美族勢力日益壯大，因此今日的嘉里村以阿美族人口居多。這邊的道路窄窄的、樓房都不高，沒有過多的汽機車，有的是純樸的氛圍，許多村民甚至擺出椅子與小板凳，在自己住家樓下聊起天來。我們看著地圖，卻怎麼也找不到立霧工作坊，詢問村民後才發現，原來它隱身在巷弄裡更小的巷子中。
     </InnerText>
     <Figure
-      url="https://res.cloudinary.com/defykcau3/image/upload/v1573259916/workshop-1_yeglj1.jpg"
+      url="https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259916/workshop-1_yeglj1.jpg"
       caption="隱藏在巷弄中的十二之一號"
     />
     <InnerText>
@@ -30,7 +30,7 @@ export const Content: React.FC<{}> = () => (
       立霧工作坊是一個非營利性質的藝術空間及創意教育中心，其營運理念是以「教育」、「分享」、「支持小量化及獨立性」、「專案導向」以及「支持社區在地發展與少數原民族群及文化」為原則。他們曾邀請同樣身為原住民的紀錄片工作者前來分享，也舉辦過像是《街頭語言游擊隊——漫畫創作工作坊》等，具有教育意義或啟發性的活動，多元化的面貌之下，皆是以上述為前提來進行規劃的。
     </InnerText>
     <Figure
-      url="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/workshop-3_iekumg.jpg"
+      url="https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259917/workshop-3_iekumg.jpg"
       caption="輕薄之力——素人影像創作展"
     />
     <InnerText>

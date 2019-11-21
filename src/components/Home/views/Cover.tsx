@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const OuterWrapper = styled.div`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259914/front-cover_hxcg1b.jpg');
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/q_30/v1573259914/front-cover_hxcg1b.jpg');
   background-size: cover;
   min-height: calc(100vh - 140px);
   position: relative;

@@ -23,7 +23,7 @@ const Wrapper = styled(ScrollEl)`
 `;
 
 const CoverWrapper = styled.div`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259916/post-1_nssxrn.jpg');
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259916/post-1_nssxrn.jpg');
   background-repeat: no-repeat;
   background-position: 34%;
   background-size: cover;

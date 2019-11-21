@@ -25,7 +25,7 @@ export const Wang: React.FC<{}> = () => {
         ))
       }
       <Figure
-        url="https://res.cloudinary.com/defykcau3/image/upload/v1573259917/zw-1_fhbulj.jpg"
+        url="https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259917/zw-1_fhbulj.jpg"
         caption="以「眼睛」作為創作主題的作品"
       />
       {

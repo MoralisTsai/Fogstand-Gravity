@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Parallax = styled.div`
-  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259914/sub-1_pf2pgl.jpg');
+  background-image: url('https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259914/sub-1_pf2pgl.jpg');
   min-height: 800px;
   background-attachment: fixed;
   background-position: top left;
@@ -54,7 +54,7 @@ const ContentWrapper = styled(PosedContent)`
 `;
 
 const Avatar = styled.div`
-  background: url('https://res.cloudinary.com/defykcau3/image/upload/v1573259916/c-avatar-1_ttpeeu.png');
+  background: url('https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259916/c-avatar-1_ttpeeu.png');
   background-size: cover;
   width: 50px;
   height: 50px;

@@ -25,7 +25,7 @@ const Wei: React.FC<{}> = () => {
         ))
       }
       <Figure
-        url="https://res.cloudinary.com/defykcau3/image/upload/v1573259915/dxw-1_g1wdks.jpg"
+        url="https://res.cloudinary.com/defykcau3/image/upload/q_auto/v1573259915/dxw-1_g1wdks.jpg"
         caption="對於未來，鄧曉蔚仍然持續摸索著，學會為自己負責的她，希望能把握每次學習的機會，並能充實自己在各方面的能力、累積自己的資本。"
       />
       {

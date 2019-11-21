@@ -7,10 +7,12 @@ import {
   Content,
 } from './views';
 
-export const About: React.FC<{}> = () => (
+const About: React.FC<{}> = () => (
   <>
     <Cover />
     <Content />
     <Footer />
   </>
 );
+
+export default About;

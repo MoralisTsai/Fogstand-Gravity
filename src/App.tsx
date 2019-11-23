@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { Url } from 'ts/Url';
+import { Loading } from 'components/Loading';
 
 const Home = lazy(() => import('components/Home'));
 const About = lazy(() => import('components/About'));
@@ -20,7 +21,7 @@ const Wang = lazy(() => import('components/Story/Wang'));
 
 export const App: React.FC<{}> = () => (
   <BrowserRouter>
-    <Suspense fallback={null}>
+    <Suspense fallback={<Loading />}>
       <Switch>
         <Route
           path={Url.WENLI}
